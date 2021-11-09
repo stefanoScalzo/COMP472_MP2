@@ -43,15 +43,15 @@ class Game:
         # Player X always plays first
         self.player_turn = 'X'
 
-    def e3(self):
+    def e3(self, current_depth):
         winning_x = 0
         winning_o = 0
 
         # check obvious scores (i.e. if there's a winner or a tie)
         if self.is_end() == 'X':
-            return -100
+            return -100*(1/(current_depth+1))
         if self.is_end() == 'O':
-            return 100
+            return 100*(1/(current_depth+1))
         if self.is_end() == '.':
             return 0
 
@@ -81,12 +81,12 @@ class Game:
                 # increment winning score accordingly
                 if streak == self.winningSize:
                     if winner == 'X':
-                        winning_x+1
+                        winning_x += 1
                     elif winner == 'O':
-                        winning_o+1
+                        winning_o += 1
                     elif winner == '.':
-                        winning_x+1
-                        winning_o+1
+                        winning_x += 1
+                        winning_o += 1
 
                 winner = self.current_state[i][j]
                 streak = 0
@@ -106,12 +106,12 @@ class Game:
                 # increment winning score accordingly
                 if streak == self.winningSize:
                     if winner == 'X':
-                        winning_x + 1
+                        winning_x += 1
                     elif winner == 'O':
-                        winning_o + 1
+                        winning_o += 1
                     elif winner == '.':
-                        winning_x + 1
-                        winning_o + 1
+                        winning_x += 1
+                        winning_o += 1
 
                 winner = self.current_state[i][j]
                 streak = 0
@@ -131,12 +131,15 @@ class Game:
                 # increment winning score accordingly
                 if streak == self.winningSize:
                     if winner == 'X':
-                        winning_x + 1
+                        winning_x += 1
                     elif winner == 'O':
-                        winning_o + 1
+                        winning_o += 1
                     elif winner == '.':
-                        winning_x + 1
-                        winning_o + 1
+                        winning_x += 1
+                        winning_o += 1
+
+                winner = self.current_state[i][j]
+                streak = 0
 
                 # Left Diagonal
                 for k in range(0, self.winningSize):
@@ -153,12 +156,12 @@ class Game:
                 # increment winning score accordingly
                 if streak == self.winningSize:
                     if winner == 'X':
-                        winning_x + 1
+                        winning_x += 1
                     elif winner == 'O':
-                        winning_o + 1
+                        winning_o += 1
                     elif winner == '.':
-                        winning_x + 1
-                        winning_o + 1
+                        winning_x += 1
+                        winning_o += 1
 
         return winning_o-winning_x
         
@@ -238,7 +241,6 @@ class Game:
     def draw_board(self):
         print()
         for x in range(0, self.board_size):
-
             for y in range(0, self.board_size):
                 print(F'{self.current_state[x][y]}', end="  ")
             print()
@@ -380,10 +382,10 @@ class Game:
         return self.player_turn
 
     # variables requires for minimax & alphabeta Adversial Searches
-    maxDepth = 10
+    max_depth = 3
     maxTurnTime = 5
-    maxDepthTimer = maxDepth
-    timerIsUp = False
+    max_depth_adjusted = max_depth
+    timer_is_up = False
 
     def minimax(self, current_depth=0, max=False):
         """
@@ -415,12 +417,12 @@ class Game:
                 if self.current_state[i][j] == '.':
 
                     # If timer is has expired, stop traversing and set the current depth as max depth
-                    if not self.timerIsUp and move_time >= self.maxTurnTime :
-                        self.maxDepthTimer = current_depth
-                        self.timerIsUp = True
+                    if not self.timer_is_up and move_time >= self.maxTurnTime :
+                        self.max_depth_adjusted = current_depth
+                        self.timer_is_up = True
 
                     # End traversal when resources are spent or game is over
-                    end_of_traversal = current_depth == self.maxDepthTimer or self.is_end()
+                    end_of_traversal = current_depth == self.max_depth_adjusted or self.is_end()
                     if end_of_traversal:
                         v = self.e3()
 
@@ -458,16 +460,15 @@ class Game:
         :return: the value of the heuristic being propagated along with the X,Y coordinates of the best computed move
         """
 
-        value = 100
+        value = 1
         if max:
-            value = -100
+            value = -1
         x = None
         y = None
 
         # Iterate through every possible move (i, j)
         for i in range(0, self.board_size):
             for j in range(0, self.board_size):
-
                 # Update timer
                 move_time = time.time() - self.move_start
 
@@ -475,17 +476,18 @@ class Game:
                 if self.current_state[i][j] == '.':
 
                     # If timer is has expired, stop traversing and set the current depth as max depth
-                    if not self.timerIsUp and move_time >= self.maxTurnTime :
-                        self.maxDepthTimer = current_depth
-                        self.timerIsUp = True
+                    if not self.timer_is_up and move_time >= self.maxTurnTime :
+                        self.max_depth_adjusted = current_depth
+                        self.timer_is_up = True
 
-                    # end traversal if resources are spent or game is over
-                    end_of_traversal = current_depth == self.maxDepthTimer or self.is_end()
-                    if end_of_traversal:
-                        v = self.e3()
+                    # end traversal if resources are spent
+                    end_of_traversal = current_depth == self.max_depth_adjusted
+
                     if max:
                         self.current_state[i][j] = 'O'
-                        if not end_of_traversal:
+                        if end_of_traversal or self.is_end():
+                            v = self.e3(current_depth)
+                        else:
                             current_depth = current_depth + 1
                             (v, _, _) = self.alphabeta(current_depth, alpha, beta, max=False)
                         if v > value:
@@ -494,7 +496,9 @@ class Game:
                             y = j
                     else:
                         self.current_state[i][j] = 'X'
-                        if not end_of_traversal:
+                        if end_of_traversal or self.is_end():
+                            v = self.e3(current_depth)
+                        else:
                             current_depth = current_depth + 1
                             (v, _, _) = self.alphabeta(current_depth, alpha, beta, max=True)
                         if v < value:
@@ -502,6 +506,7 @@ class Game:
                             x = i
                             y = j
 
+                    print(str(current_depth) + " " + str(v) + " " + str(max))
                     # Reset cell so that state is not permanently modified by A.I. traversal
                     self.current_state[i][j] = '.'
 
@@ -545,6 +550,7 @@ class Game:
                     (m, x, y) = self.alphabeta(max=False)
                 else:
                     (m, x, y) = self.alphabeta(max=True)
+                print(m)
             end = time.time()
             if (self.player_turn == 'X' and player_x == self.HUMAN) or (self.player_turn == 'O' and player_o == self.HUMAN):
                     if self.recommend:
@@ -556,8 +562,8 @@ class Game:
                         print(F'Player {self.player_turn} under AI control plays: x = {x}, y = {y}')
 
             # reset variables
-            self.maxDepthTimer = self.maxDepth
-            self.timerIsUp = False
+            self.max_depth_adjusted = self.max_depth
+            self.timer_is_up = False
             self.current_state[x][y] = self.player_turn
             self.switch_player()
 
@@ -565,7 +571,7 @@ def timeoutHandler():
     raise TimeoutError("Player took too long to move!")
 
 def main():
-    g = Game(9, 1, [{'x':0,'y':0}], 3,12,recommend=True)
+    g = Game(6, 1, [{'x':0,'y':0}], 4, 12, recommend=True)
     g.play(algo=Game.ALPHABETA,player_x=Game.AI,player_o=Game.AI)
     #g.play(algo=Game.MINIMAX,player_x=Game.AI,player_o=Game.HUMAN)
 
