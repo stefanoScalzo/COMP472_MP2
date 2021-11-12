@@ -693,8 +693,6 @@ class LineEmUp:
                 return
 
             self.move_start = time.time()
-            #signal.signal(signal.SIGALRM, timeoutHandler)
-            #signal.alarm(self.maxTurnTime)
 
             if self.algo == self.MINIMAX:
                 if self.player_turn == 'X':

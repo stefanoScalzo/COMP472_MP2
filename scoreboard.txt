@@ -10,17 +10,17 @@ Algo for O: ALPHABETA
 Player X heuristic: E2
 Player O heuristic: E1
 
-i. Average of Average evaluation time of heuristic: 9.081612427424173e-06
-ii. Average of Total states evaluated: 518055.0
-iii. Average of Average of average depths: 18.331802001606366
+i. Average of Average evaluation time of heuristic: 8.157279899085612e-06
+ii. Average of Total states evaluated: 568957.5
+iii. Average of Average of average depths: 19.88128054741736
 iv. Average Total number of states evaluated at each depth: 
-	8: 1065995968.0
-	7: 1014883490.5
-	6: 127426224.5
-	5: 70590560.0
-	4: 5877623.5
-	3: 4036454.0
-	2: 217040.0
-	1: 297991.5
-v. Average of Average ARD: 6.107780938361715
-vi. Average Total Move Count: 45.0
+	8: 1427861748.0
+	7: 1028093136.0
+	6: 142511870.5
+	5: 72352946.0
+	4: 6635507.0
+	3: 4258675.0
+	2: 206886.5
+	1: 344130.5
+v. Average of Average ARD: 6.627302046549248
+vi. Average Total Move Count: 36.0

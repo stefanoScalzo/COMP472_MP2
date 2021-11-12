@@ -16,294 +16,294 @@ Player O heuristic: E1
 .  .  .  .  
 
 Heuristic returned: -2
-i. Evaluation time: 2.7867267s
-i. Heuristic evaluation time: 1.3714268207550049
-ii. Number of states evaluated: 127215
+i. Evaluation time: 2.7492123s
+i. Heuristic evaluation time: 1.308030128479004
+ii. Number of states evaluated: 133312
 iii. Number of states evaluated per depth:
-	7: 445947504
-	6: 28083100
-	5: 26112077
-	4: 624505
-	3: 1345729
-	2: 43724
-	1: 127215
+	7: 471067905
+	6: 32666310
+	5: 27949927
+	4: 563628
+	3: 1371481
+	2: 39900
+	1: 133312
 iv. Average depths of heuristic evaluation: 7.0
 v. ARD: 7.0
-Player X under AI control plays: x = 2, y = 2
+Player X under AI control plays: x = 3, y = 3
 
 .  .  .  .  
 .  .  .  .  
+.  .  .  .  
+.  .  .  X  
+
+Heuristic returned: 12
+i. Evaluation time: 5.0004067s
+i. Heuristic evaluation time: 0.0692605972290039
+ii. Number of states evaluated: 239456
+iii. Number of states evaluated per depth:
+	8: 1704157104
+	7: 379441743
+	6: 116208976
+	5: 25990177
+	4: 5272147
+	3: 1165329
+	2: 23296
+iv. Average depths of heuristic evaluation: 7.9863
+v. ARD: 7.98631515772409
+Player O under AI control plays: x = 1, y = 2
+
+.  .  .  .  
+.  .  O  .  
+.  .  .  .  
+.  .  .  X  
+
+Heuristic returned: -1
+i. Evaluation time: 1.8385415s
+i. Heuristic evaluation time: 0.8731634616851807
+ii. Number of states evaluated: 107334
+iii. Number of states evaluated per depth:
+	7: 319557102
+	6: 28944236
+	5: 20901599
+	4: 854953
+	3: 1176692
+	2: 55682
+	1: 107334
+iv. Average depths of heuristic evaluation: 6.9942
+v. ARD: 6.994159960985126
+Player X under AI control plays: x = 3, y = 0
+
+.  .  .  .  
+.  .  O  .  
+.  .  .  .  
+X  .  .  X  
+
+Heuristic returned: 13
+i. Evaluation time: 0.2755041s
+i. Heuristic evaluation time: 0.014393806457519531
+ii. Number of states evaluated: 45572
+iii. Number of states evaluated per depth:
+	8: 31091237
+	7: 45037111
+	6: 3342032
+	5: 4814419
+	4: 221366
+	3: 453992
+	2: 27521
+	1: 45572
+iv. Average depths of heuristic evaluation: 7.9604
+v. ARD: 7.960378749660444
+Player O under AI control plays: x = 1, y = 0
+
+.  .  .  .  
+O  .  O  .  
+.  .  .  .  
+X  .  .  X  
+
+Heuristic returned: -1
+i. Evaluation time: 0.8288598s
+i. Heuristic evaluation time: 0.44379520416259766
+ii. Number of states evaluated: 55741
+iii. Number of states evaluated per depth:
+	7: 108151098
+	6: 10765613
+	5: 8656478
+	4: 388973
+	3: 558011
+	2: 13761
+	1: 55741
+iv. Average depths of heuristic evaluation: 6.9674
+v. ARD: 6.967408312958435
+Player X under AI control plays: x = 3, y = 1
+
+.  .  .  .  
+O  .  O  .  
+.  .  .  .  
+X  X  .  X  
+
+Heuristic returned: 12
+i. Evaluation time: 0.4650102s
+i. Heuristic evaluation time: 0.0182802677154541
+ii. Number of states evaluated: 54032
+iii. Number of states evaluated per depth:
+	8: 155254225
+	7: 22749686
+	6: 18596991
+	5: 3958311
+	4: 1917464
+	3: 249720
+	2: 60442
+	1: 54032
+iv. Average depths of heuristic evaluation: 7.8675
+v. ARD: 7.867461648344824
+Player O under AI control plays: x = 3, y = 2
+
+.  .  .  .  
+O  .  O  .  
+.  .  .  .  
+X  X  O  X  
+
+Heuristic returned: 0
+i. Evaluation time: 0.1529496s
+i. Heuristic evaluation time: 0.1007695198059082
+ii. Number of states evaluated: 13781
+iii. Number of states evaluated per depth:
+	7: 9415282
+	6: 1106035
+	5: 1147644
+	4: 56299
+	3: 113740
+	2: 2115
+	1: 13781
+iv. Average depths of heuristic evaluation: 6.9465
+v. ARD: 6.946478220579186
+Player X under AI control plays: x = 2, y = 1
+
+.  .  .  .  
+O  .  O  .  
+.  X  .  .  
+X  X  O  X  
+
+Heuristic returned: 13
+i. Evaluation time: 0.0610394s
+i. Heuristic evaluation time: 0.003545999526977539
+ii. Number of states evaluated: 12837
+iii. Number of states evaluated per depth:
+	8: 8193980
+	7: 3776866
+	6: 1758992
+	5: 836690
+	4: 197133
+	3: 94096
+	2: 13963
+	1: 12837
+iv. Average depths of heuristic evaluation: 7.6696
+v. ARD: 7.669723183391003
+Player O under AI control plays: x = 2, y = 2
+
+.  .  .  .  
+O  .  O  .  
+.  X  O  .  
+X  X  O  X  
+
+Heuristic returned: 0
+i. Evaluation time: 0.0296469s
+i. Heuristic evaluation time: 0.013430118560791016
+ii. Number of states evaluated: 2936
+iii. Number of states evaluated per depth:
+	7: 332433
+	6: 292179
+	5: 94417
+	4: 47197
+	3: 15713
+	2: 3033
+	1: 2936
+iv. Average depths of heuristic evaluation: 6.5854
+v. ARD: 6.585130113237604
+Player X under AI control plays: x = 0, y = 2
+
 .  .  X  .  
-.  .  .  .  
+O  .  O  .  
+.  X  O  .  
+X  X  O  X  
 
 Heuristic returned: 12
-i. Evaluation time: 5.0002551s
-i. Heuristic evaluation time: 0.08715653419494629
-ii. Number of states evaluated: 245487
+i. Evaluation time: 0.0073297s
+i. Heuristic evaluation time: 0.0004363059997558594
+ii. Number of states evaluated: 861
 iii. Number of states evaluated per depth:
-	8: 1244702021
-	7: 618844431
-	6: 111220091
-	5: 42490916
-	4: 5329118
-	3: 1683087
-	2: 63520
-iv. Average depths of heuristic evaluation: 7.9868
-v. ARD: 7.986766382892164
-Player O under AI control plays: x = 2, y = 1
+	7: 62023
+	6: 16698
+	5: 21920
+	4: 1601
+	3: 4052
+	2: 214
+	1: 861
+iv. Average depths of heuristic evaluation: 6.7285
+v. ARD: 6.7275862068964205
+Player O under AI control plays: x = 0, y = 1
 
-.  .  .  .  
-.  .  .  .  
 .  O  X  .  
-.  .  .  .  
-
-Heuristic returned: -1
-i. Evaluation time: 1.7599971s
-i. Heuristic evaluation time: 0.8921053409576416
-ii. Number of states evaluated: 98959
-iii. Number of states evaluated per depth:
-	7: 288753317
-	6: 24312376
-	5: 18976316
-	4: 638554
-	3: 1046864
-	2: 29304
-	1: 98959
-iv. Average depths of heuristic evaluation: 6.9969
-v. ARD: 6.996868668263032
-Player X under AI control plays: x = 3, y = 3
-
-.  .  .  .  
-.  .  .  .  
-.  O  X  .  
-.  .  .  X  
-
-Heuristic returned: 11
-i. Evaluation time: 0.1433649s
-i. Heuristic evaluation time: 0.007159709930419922
-ii. Number of states evaluated: 32083
-iii. Number of states evaluated per depth:
-	8: 10051769
-	7: 26114083
-	6: 945551
-	5: 2981525
-	4: 95984
-	3: 284093
-	2: 13623
-	1: 32083
-iv. Average depths of heuristic evaluation: 7.9699
-v. ARD: 7.969902525223736
-Player O under AI control plays: x = 1, y = 1
-
-.  .  .  .  
-.  O  .  .  
-.  O  X  .  
-.  .  .  X  
-
-Heuristic returned: -1
-i. Evaluation time: 0.7950838s
-i. Heuristic evaluation time: 0.47271227836608887
-ii. Number of states evaluated: 54275
-iii. Number of states evaluated per depth:
-	7: 86781643
-	6: 16949647
-	5: 7081440
-	4: 955770
-	3: 544522
-	2: 61078
-	1: 54275
-iv. Average depths of heuristic evaluation: 6.9696
-v. ARD: 6.969609065770211
-Player X under AI control plays: x = 0, y = 3
-
-.  .  .  X  
-.  O  .  .  
-.  O  X  .  
-.  .  .  X  
-
-Heuristic returned: 12
-i. Evaluation time: 0.0634398s
-i. Heuristic evaluation time: 0.0038144588470458984
-ii. Number of states evaluated: 14159
-iii. Number of states evaluated per depth:
-	8: 3765053
-	7: 5979941
-	6: 503335
-	5: 964311
-	4: 53681
-	3: 113507
-	2: 7710
-	1: 14159
-iv. Average depths of heuristic evaluation: 7.9078
-v. ARD: 7.907823497563617
-Player O under AI control plays: x = 1, y = 3
-
-.  .  .  X  
-.  O  .  O  
-.  O  X  .  
-.  .  .  X  
+O  .  O  .  
+.  X  O  .  
+X  X  O  X  
 
 Heuristic returned: 0
-i. Evaluation time: 0.1197915s
-i. Heuristic evaluation time: 0.0805051326751709
-ii. Number of states evaluated: 10419
-iii. Number of states evaluated per depth:
-	7: 5448938
-	6: 595665
-	5: 740775
-	4: 41319
-	3: 78117
-	2: 2804
-	1: 10419
-iv. Average depths of heuristic evaluation: 6.9191
-v. ARD: 6.919122257053291
-Player X under AI control plays: x = 0, y = 1
-
-.  X  .  X  
-.  O  .  O  
-.  O  X  .  
-.  .  .  X  
-
-Heuristic returned: 13
-i. Evaluation time: 0.0147502s
-i. Heuristic evaluation time: 0.0007379055023193359
-ii. Number of states evaluated: 3621
-iii. Number of states evaluated per depth:
-	8: 240567
-	7: 645188
-	6: 45904
-	5: 144169
-	4: 7636
-	3: 22088
-	2: 1539
-	1: 3621
-iv. Average depths of heuristic evaluation: 7.8698
-v. ARD: 7.869711215580926
-Player O under AI control plays: x = 0, y = 2
-
-.  X  O  X  
-.  O  .  O  
-.  O  X  .  
-.  .  .  X  
-
-Heuristic returned: 0
-i. Evaluation time: 0.0181913s
-i. Heuristic evaluation time: 0.010526657104492188
-ii. Number of states evaluated: 1429
-iii. Number of states evaluated per depth:
-	7: 184792
-	6: 14838
-	5: 40925
-	4: 2892
-	3: 7970
-	2: 546
-	1: 1429
-iv. Average depths of heuristic evaluation: 6.8415
-v. ARD: 6.841221374045799
-Player X under AI control plays: x = 3, y = 0
-
-.  X  O  X  
-.  O  .  O  
-.  O  X  .  
-X  .  .  X  
-
-Heuristic returned: 12
-i. Evaluation time: 0.0085862s
-i. Heuristic evaluation time: 0.00039505958557128906
-ii. Number of states evaluated: 983
-iii. Number of states evaluated per depth:
-	7: 80688
-	6: 25274
-	5: 29026
-	4: 2542
-	3: 5497
-	2: 326
-	1: 983
-iv. Average depths of heuristic evaluation: 6.7349
-v. ARD: 6.734138972809605
-Player O under AI control plays: x = 2, y = 3
-
-.  X  O  X  
-.  O  .  O  
-.  O  X  O  
-X  .  .  X  
-
-Heuristic returned: 0
-i. Evaluation time: 0.0037737s
+i. Evaluation time: 0.0026011s
 i. Heuristic evaluation time: 0
-ii. Number of states evaluated: 315
+ii. Number of states evaluated: 209
 iii. Number of states evaluated per depth:
-	6: 1352
-	5: 6725
-	4: 449
-	3: 1323
-	2: 114
-	1: 315
-iv. Average depths of heuristic evaluation: 5.7027
-v. ARD: 5.699999998646305
-Player X under AI control plays: x = 2, y = 0
+	6: 865
+	5: 2798
+	4: 288
+	3: 811
+	2: 82
+	1: 209
+iv. Average depths of heuristic evaluation: 5.8358
+v. ARD: 5.848484832479802
+Player X under AI control plays: x = 2, y = 3
 
+.  O  X  .  
+O  .  O  .  
 .  X  O  X  
-.  O  .  O  
-X  O  X  O  
-X  .  .  X  
+X  X  O  X  
 
 Heuristic returned: 12
-i. Evaluation time: 0.0006783s
-i. Heuristic evaluation time: 1.71661376953125e-05
-ii. Number of states evaluated: 75
+i. Evaluation time: 0.0009971s
+i. Heuristic evaluation time: 3.9577484130859375e-05
+ii. Number of states evaluated: 73
 iii. Number of states evaluated per depth:
-	5: 584
+	5: 575
 	4: 70
-	3: 235
+	3: 231
 	2: 30
-	1: 75
-iv. Average depths of heuristic evaluation: 4.8333
-v. ARD: 4.82608635608602
-Player O under AI control plays: x = 0, y = 0
+	1: 73
+iv. Average depths of heuristic evaluation: 4.9091
+v. ARD: 4.904761432701329
+Player O under AI control plays: x = 0, y = 3
 
-O  X  O  X  
-.  O  .  O  
-X  O  X  O  
-X  .  .  X  
+.  O  X  O  
+O  .  O  .  
+.  X  O  X  
+X  X  O  X  
 
 Heuristic returned: 0
-i. Evaluation time: 0.0010831s
+i. Evaluation time: 0.0005393s
 i. Heuristic evaluation time: 0
 ii. Number of states evaluated: 30
 iii. Number of states evaluated per depth:
-	4: 16
+	4: 19
 	3: 70
 	2: 11
 	1: 30
 iv. Average depths of heuristic evaluation: 4.0
 v. ARD: 4.0
-Player X under AI control plays: x = 1, y = 0
+Player X under AI control plays: x = 2, y = 0
 
-O  X  O  X  
-X  O  .  O  
-X  O  X  O  
-X  .  .  X  
+.  O  X  O  
+O  .  O  .  
+X  X  O  X  
+X  X  O  X  
 
 Heuristic returned: 12
-i. Evaluation time: 0.0003526s
-i. Heuristic evaluation time: 2.9087066650390625e-05
-ii. Number of states evaluated: 13
+i. Evaluation time: 0.0002592s
+i. Heuristic evaluation time: 2.193450927734375e-05
+ii. Number of states evaluated: 11
 iii. Number of states evaluated per depth:
-	3: 27
+	3: 16
 	2: 4
-	1: 13
+	1: 11
 iv. Average depths of heuristic evaluation: 3.0
 v. ARD: 3.0
-Player O under AI control plays: x = 1, y = 2
+Player O under AI control plays: x = 0, y = 0
 
-O  X  O  X  
-X  O  O  O  
-X  O  X  O  
-X  .  .  X  
+O  O  X  O  
+O  .  O  .  
+X  X  O  X  
+X  X  O  X  
 
 Heuristic returned: 0
-i. Evaluation time: 0.0002036s
+i. Evaluation time: 0.0001545s
 i. Heuristic evaluation time: 0
 ii. Number of states evaluated: 4
 iii. Number of states evaluated per depth:
@@ -311,42 +311,42 @@ iii. Number of states evaluated per depth:
 	1: 4
 iv. Average depths of heuristic evaluation: 2.0
 v. ARD: 2.0
-Player X under AI control plays: x = 3, y = 1
+Player X under AI control plays: x = 1, y = 3
 
-O  X  O  X  
-X  O  O  O  
-X  O  X  O  
-X  X  .  X  
+O  O  X  O  
+O  .  O  X  
+X  X  O  X  
+X  X  O  X  
 
 Heuristic returned: 12
-i. Evaluation time: 4.34e-05s
-i. Heuristic evaluation time: 5.7220458984375e-06
+i. Evaluation time: 6.1e-05s
+i. Heuristic evaluation time: 6.67572021484375e-06
 ii. Number of states evaluated: 1
 iii. Number of states evaluated per depth:
 	1: 1
 iv. Average depths of heuristic evaluation: 1.0
 v. ARD: 1.0
-Player O under AI control plays: x = 3, y = 2
+Player O under AI control plays: x = 1, y = 1
 
-O  X  O  X  
-X  O  O  O  
-X  O  X  O  
+O  O  X  O  
+O  O  O  X  
+X  X  O  X  
 X  X  O  X  
 
 It's a tie!
-i. Average evaluation time of heuristic: 7.525461755883241e-06
-ii. Total states evaluated: 589068
-iii. Average of average depths: 5.858271556871888
+i. Average evaluation time of heuristic: 6.344362106814735e-06
+ii. Total states evaluated: 666190
+iii. Average of average depths: 5.840667249947434
 iv. Total number of states evaluated at each depth: 
-	8: 1258759410
-	7: 1478780525
-	6: 182697133
-	5: 99568789
-	4: 7752536
-	3: 5133129
-	2: 224334
-	1: 343581
-v. Average ARD: 5.85757814462092
+	8: 1898696546
+	7: 1359591249
+	6: 213698927
+	5: 94374955
+	4: 9521138
+	3: 5203954
+	2: 240055
+	1: 426734
+v. Average ARD: 5.841117988684892
 vi. Total Move Count: 16
 n: 4
 b: 0
@@ -360,261 +360,145 @@ Algo for O: ALPHABETA
 Player X heuristic: E2
 Player O heuristic: E1
 
-i. Average of Average evaluation time of heuristic: 9.081612427424173e-06
-ii. Average of Total states evaluated: 518055.0
-iii. Average of Average of average depths: 18.331802001606366
+i. Average of Average evaluation time of heuristic: 8.157279899085612e-06
+ii. Average of Total states evaluated: 568957.5
+iii. Average of Average of average depths: 19.88128054741736
 iv. Average Total number of states evaluated at each depth: 
-	8: 1065995968.0
-	7: 1014883490.5
-	6: 127426224.5
-	5: 70590560.0
-	4: 5877623.5
-	3: 4036454.0
-	2: 217040.0
-	1: 297991.5
-v. Average of Average ARD: 6.107780938361715
-vi. Average Total Move Count: 45.0
-6: 24312376
-	5: 18976316
-	4: 638554
-	3: 1046864
-	2: 29304
-	1: 98959
-iv. Average depths of heuristic evaluation: 6.9969
-v. ARD: 6.996868668263032
-Player X under AI control plays: x = 3, y = 3
+	8: 1427861748.0
+	7: 1028093136.0
+	6: 142511870.5
+	5: 72352946.0
+	4: 6635507.0
+	3: 4258675.0
+	2: 206886.5
+	1: 344130.5
+v. Average of Average ARD: 6.627302046549248
+vi. Average Total Move Count: 36.0
+Player O under AI control plays: x = 2, y = 2
 
 .  .  .  .  
-.  .  .  .  
-.  O  X  .  
-.  .  .  X  
+O  .  O  .  
+.  X  O  .  
+X  X  O  X  
 
-Heuristic returned: 11
-i. Evaluation time: 0.1433649s
-i. Heuristic evaluation time: 0.007159709930419922
-ii. Number of states evaluated: 32083
+Heuristic returned: 0
+i. Evaluation time: 0.0296469s
+i. Heuristic evaluation time: 0.013430118560791016
+ii. Number of states evaluated: 2936
 iii. Number of states evaluated per depth:
-	8: 10051769
-	7: 26114083
-	6: 945551
-	5: 2981525
-	4: 95984
-	3: 284093
-	2: 13623
-	1: 32083
-iv. Average depths of heuristic evaluation: 7.9699
-v. ARD: 7.969902525223736
-Player O under AI control plays: x = 1, y = 1
+	7: 332433
+	6: 292179
+	5: 94417
+	4: 47197
+	3: 15713
+	2: 3033
+	1: 2936
+iv. Average depths of heuristic evaluation: 6.5854
+v. ARD: 6.585130113237604
+Player X under AI control plays: x = 0, y = 2
 
-.  .  .  .  
-.  O  .  .  
-.  O  X  .  
-.  .  .  X  
-
-Heuristic returned: -1
-i. Evaluation time: 0.7950838s
-i. Heuristic evaluation time: 0.47271227836608887
-ii. Number of states evaluated: 54275
-iii. Number of states evaluated per depth:
-	7: 86781643
-	6: 16949647
-	5: 7081440
-	4: 955770
-	3: 544522
-	2: 61078
-	1: 54275
-iv. Average depths of heuristic evaluation: 6.9696
-v. ARD: 6.969609065770211
-Player X under AI control plays: x = 0, y = 3
-
-.  .  .  X  
-.  O  .  .  
-.  O  X  .  
-.  .  .  X  
+.  .  X  .  
+O  .  O  .  
+.  X  O  .  
+X  X  O  X  
 
 Heuristic returned: 12
-i. Evaluation time: 0.0634398s
-i. Heuristic evaluation time: 0.0038144588470458984
-ii. Number of states evaluated: 14159
+i. Evaluation time: 0.0073297s
+i. Heuristic evaluation time: 0.0004363059997558594
+ii. Number of states evaluated: 861
 iii. Number of states evaluated per depth:
-	8: 3765053
-	7: 5979941
-	6: 503335
-	5: 964311
-	4: 53681
-	3: 113507
-	2: 7710
-	1: 14159
-iv. Average depths of heuristic evaluation: 7.9078
-v. ARD: 7.907823497563617
-Player O under AI control plays: x = 1, y = 3
+	7: 62023
+	6: 16698
+	5: 21920
+	4: 1601
+	3: 4052
+	2: 214
+	1: 861
+iv. Average depths of heuristic evaluation: 6.7285
+v. ARD: 6.7275862068964205
+Player O under AI control plays: x = 0, y = 1
 
-.  .  .  X  
-.  O  .  O  
 .  O  X  .  
-.  .  .  X  
+O  .  O  .  
+.  X  O  .  
+X  X  O  X  
 
 Heuristic returned: 0
-i. Evaluation time: 0.1197915s
-i. Heuristic evaluation time: 0.0805051326751709
-ii. Number of states evaluated: 10419
-iii. Number of states evaluated per depth:
-	7: 5448938
-	6: 595665
-	5: 740775
-	4: 41319
-	3: 78117
-	2: 2804
-	1: 10419
-iv. Average depths of heuristic evaluation: 6.9191
-v. ARD: 6.919122257053291
-Player X under AI control plays: x = 0, y = 1
-
-.  X  .  X  
-.  O  .  O  
-.  O  X  .  
-.  .  .  X  
-
-Heuristic returned: 13
-i. Evaluation time: 0.0147502s
-i. Heuristic evaluation time: 0.0007379055023193359
-ii. Number of states evaluated: 3621
-iii. Number of states evaluated per depth:
-	8: 240567
-	7: 645188
-	6: 45904
-	5: 144169
-	4: 7636
-	3: 22088
-	2: 1539
-	1: 3621
-iv. Average depths of heuristic evaluation: 7.8698
-v. ARD: 7.869711215580926
-Player O under AI control plays: x = 0, y = 2
-
-.  X  O  X  
-.  O  .  O  
-.  O  X  .  
-.  .  .  X  
-
-Heuristic returned: 0
-i. Evaluation time: 0.0181913s
-i. Heuristic evaluation time: 0.010526657104492188
-ii. Number of states evaluated: 1429
-iii. Number of states evaluated per depth:
-	7: 184792
-	6: 14838
-	5: 40925
-	4: 2892
-	3: 7970
-	2: 546
-	1: 1429
-iv. Average depths of heuristic evaluation: 6.8415
-v. ARD: 6.841221374045799
-Player X under AI control plays: x = 3, y = 0
-
-.  X  O  X  
-.  O  .  O  
-.  O  X  .  
-X  .  .  X  
-
-Heuristic returned: 12
-i. Evaluation time: 0.0085862s
-i. Heuristic evaluation time: 0.00039505958557128906
-ii. Number of states evaluated: 983
-iii. Number of states evaluated per depth:
-	7: 80688
-	6: 25274
-	5: 29026
-	4: 2542
-	3: 5497
-	2: 326
-	1: 983
-iv. Average depths of heuristic evaluation: 6.7349
-v. ARD: 6.734138972809605
-Player O under AI control plays: x = 2, y = 3
-
-.  X  O  X  
-.  O  .  O  
-.  O  X  O  
-X  .  .  X  
-
-Heuristic returned: 0
-i. Evaluation time: 0.0037737s
+i. Evaluation time: 0.0026011s
 i. Heuristic evaluation time: 0
-ii. Number of states evaluated: 315
+ii. Number of states evaluated: 209
 iii. Number of states evaluated per depth:
-	6: 1352
-	5: 6725
-	4: 449
-	3: 1323
-	2: 114
-	1: 315
-iv. Average depths of heuristic evaluation: 5.7027
-v. ARD: 5.699999998646305
-Player X under AI control plays: x = 2, y = 0
+	6: 865
+	5: 2798
+	4: 288
+	3: 811
+	2: 82
+	1: 209
+iv. Average depths of heuristic evaluation: 5.8358
+v. ARD: 5.848484832479802
+Player X under AI control plays: x = 2, y = 3
 
+.  O  X  .  
+O  .  O  .  
 .  X  O  X  
-.  O  .  O  
-X  O  X  O  
-X  .  .  X  
+X  X  O  X  
 
 Heuristic returned: 12
-i. Evaluation time: 0.0006783s
-i. Heuristic evaluation time: 1.71661376953125e-05
-ii. Number of states evaluated: 75
+i. Evaluation time: 0.0009971s
+i. Heuristic evaluation time: 3.9577484130859375e-05
+ii. Number of states evaluated: 73
 iii. Number of states evaluated per depth:
-	5: 584
+	5: 575
 	4: 70
-	3: 235
+	3: 231
 	2: 30
-	1: 75
-iv. Average depths of heuristic evaluation: 4.8333
-v. ARD: 4.82608635608602
-Player O under AI control plays: x = 0, y = 0
+	1: 73
+iv. Average depths of heuristic evaluation: 4.9091
+v. ARD: 4.904761432701329
+Player O under AI control plays: x = 0, y = 3
 
-O  X  O  X  
-.  O  .  O  
-X  O  X  O  
-X  .  .  X  
+.  O  X  O  
+O  .  O  .  
+.  X  O  X  
+X  X  O  X  
 
 Heuristic returned: 0
-i. Evaluation time: 0.0010831s
+i. Evaluation time: 0.0005393s
 i. Heuristic evaluation time: 0
 ii. Number of states evaluated: 30
 iii. Number of states evaluated per depth:
-	4: 16
+	4: 19
 	3: 70
 	2: 11
 	1: 30
 iv. Average depths of heuristic evaluation: 4.0
 v. ARD: 4.0
-Player X under AI control plays: x = 1, y = 0
+Player X under AI control plays: x = 2, y = 0
 
-O  X  O  X  
-X  O  .  O  
-X  O  X  O  
-X  .  .  X  
+.  O  X  O  
+O  .  O  .  
+X  X  O  X  
+X  X  O  X  
 
 Heuristic returned: 12
-i. Evaluation time: 0.0003526s
-i. Heuristic evaluation time: 2.9087066650390625e-05
-ii. Number of states evaluated: 13
+i. Evaluation time: 0.0002592s
+i. Heuristic evaluation time: 2.193450927734375e-05
+ii. Number of states evaluated: 11
 iii. Number of states evaluated per depth:
-	3: 27
+	3: 16
 	2: 4
-	1: 13
+	1: 11
 iv. Average depths of heuristic evaluation: 3.0
 v. ARD: 3.0
-Player O under AI control plays: x = 1, y = 2
+Player O under AI control plays: x = 0, y = 0
 
-O  X  O  X  
-X  O  O  O  
-X  O  X  O  
-X  .  .  X  
+O  O  X  O  
+O  .  O  .  
+X  X  O  X  
+X  X  O  X  
 
 Heuristic returned: 0
-i. Evaluation time: 0.0002036s
+i. Evaluation time: 0.0001545s
 i. Heuristic evaluation time: 0
 ii. Number of states evaluated: 4
 iii. Number of states evaluated per depth:
@@ -622,42 +506,42 @@ iii. Number of states evaluated per depth:
 	1: 4
 iv. Average depths of heuristic evaluation: 2.0
 v. ARD: 2.0
-Player X under AI control plays: x = 3, y = 1
+Player X under AI control plays: x = 1, y = 3
 
-O  X  O  X  
-X  O  O  O  
-X  O  X  O  
-X  X  .  X  
+O  O  X  O  
+O  .  O  X  
+X  X  O  X  
+X  X  O  X  
 
 Heuristic returned: 12
-i. Evaluation time: 4.34e-05s
-i. Heuristic evaluation time: 5.7220458984375e-06
+i. Evaluation time: 6.1e-05s
+i. Heuristic evaluation time: 6.67572021484375e-06
 ii. Number of states evaluated: 1
 iii. Number of states evaluated per depth:
 	1: 1
 iv. Average depths of heuristic evaluation: 1.0
 v. ARD: 1.0
-Player O under AI control plays: x = 3, y = 2
+Player O under AI control plays: x = 1, y = 1
 
-O  X  O  X  
-X  O  O  O  
-X  O  X  O  
+O  O  X  O  
+O  O  O  X  
+X  X  O  X  
 X  X  O  X  
 
 It's a tie!
-i. Average evaluation time of heuristic: 7.525461755883241e-06
-ii. Total states evaluated: 589068
-iii. Average of average depths: 5.858271556871888
+i. Average evaluation time of heuristic: 6.344362106814735e-06
+ii. Total states evaluated: 666190
+iii. Average of average depths: 5.840667249947434
 iv. Total number of states evaluated at each depth: 
-	8: 1258759410
-	7: 1478780525
-	6: 182697133
-	5: 99568789
-	4: 7752536
-	3: 5133129
-	2: 224334
-	1: 343581
-v. Average ARD: 5.85757814462092
+	8: 1898696546
+	7: 1359591249
+	6: 213698927
+	5: 94374955
+	4: 9521138
+	3: 5203954
+	2: 240055
+	1: 426734
+v. Average ARD: 5.841117988684892
 vi. Total Move Count: 16
 n: 4
 b: 0
@@ -671,17 +555,17 @@ Algo for O: ALPHABETA
 Player X heuristic: E2
 Player O heuristic: E1
 
-i. Average of Average evaluation time of heuristic: 9.081612427424173e-06
-ii. Average of Total states evaluated: 518055.0
-iii. Average of Average of average depths: 18.331802001606366
+i. Average of Average evaluation time of heuristic: 8.157279899085612e-06
+ii. Average of Total states evaluated: 568957.5
+iii. Average of Average of average depths: 19.88128054741736
 iv. Average Total number of states evaluated at each depth: 
-	8: 1065995968.0
-	7: 1014883490.5
-	6: 127426224.5
-	5: 70590560.0
-	4: 5877623.5
-	3: 4036454.0
-	2: 217040.0
-	1: 297991.5
-v. Average of Average ARD: 6.107780938361715
-vi. Average Total Move Count: 45.0
+	8: 1427861748.0
+	7: 1028093136.0
+	6: 142511870.5
+	5: 72352946.0
+	4: 6635507.0
+	3: 4258675.0
+	2: 206886.5
+	1: 344130.5
+v. Average of Average ARD: 6.627302046549248
+vi. Average Total Move Count: 36.0
