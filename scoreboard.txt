@@ -1,0 +1,26 @@
+n: 4
+b: 0
+s: 4
+t: 5
+Player X: AI
+Player O: AI
+Player O: 1
+Algo for X: ALPHABETA
+Algo for O: ALPHABETA
+Player X heuristic: E2
+Player O heuristic: E1
+
+i. Average of Average evaluation time of heuristic: 9.081612427424173e-06
+ii. Average of Total states evaluated: 518055.0
+iii. Average of Average of average depths: 18.331802001606366
+iv. Average Total number of states evaluated at each depth: 
+	8: 1065995968.0
+	7: 1014883490.5
+	6: 127426224.5
+	5: 70590560.0
+	4: 5877623.5
+	3: 4036454.0
+	2: 217040.0
+	1: 297991.5
+v. Average of Average ARD: 6.107780938361715
+vi. Average Total Move Count: 45.0

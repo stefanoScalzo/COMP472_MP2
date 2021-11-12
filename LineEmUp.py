@@ -4,8 +4,9 @@
 # based on code from https://stackabuse.com/minimax-and-alpha-beta-pruning-in-python
 
 import time
-import signal
 import random
+import sys
+from PrintManager import PrintManager
 
 class LineEmUp:
     MINIMAX = 0
@@ -33,15 +34,17 @@ class LineEmUp:
         self.d2 = d2
         self.algo1 = algo1
         self.algo2 = algo2 
-
-
-        # other variables required for stats
-        self.heuristic_times = []
-        self.total_heuristic_times = []
         self.player_x = player_x
         self.player_o = player_o
         self.heuristic_x = heuristic_x
         self.heuristic_o = heuristic_o
+
+        self.initialize_game()
+
+    def initialize_game(self):
+        # variables required for stats
+        self.heuristic_times = []
+        self.total_heuristic_times = []
         self.state_count = 0
         self.total_state_counts = 0
         self.state_count_p_depth = {}
@@ -50,7 +53,6 @@ class LineEmUp:
         self.depth_averages = []
         self.ard_per_move = []
         self.ard_averages = []
-
 
         self.initialize_board()
         
@@ -631,7 +633,7 @@ class LineEmUp:
 
         return winning_o-winning_x
                     
-    def printInitialGame(self, to_game_trace):
+    def printInitialGame(self):
         print("n: "+ str(self.board_size))
         print("b: "+ str(self.blocks))
         print("s: "+ str(self.winning_size))
@@ -670,8 +672,10 @@ class LineEmUp:
         sum(self.ard_averages)/len(self.ard_averages),self.move_counter)
 
     def play(self):
-        
-        self.printInitialGame(True)
+        sys.stdout = PrintManager()
+        sys.stdout.setPath(F'gameTrace-{self.board_size}{self.blocks}{self.winning_size}{self.max_move_time}.txt')
+
+        self.printInitialGame()
         game_over = False
         self.move_counter = 0
         while not game_over:
@@ -744,5 +748,7 @@ class LineEmUp:
             self.timer_is_up = False
             self.current_state[x][y] = self.player_turn
             self.ard_per_move = []
-            self.switch_player()       
+            self.switch_player()
+
+        self.initialize_game()       
     

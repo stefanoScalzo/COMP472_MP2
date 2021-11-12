@@ -2,10 +2,11 @@
 # coding: utf-8
 
 from ScoreBoard import ScoreBoard
+from PrintManager import PrintManager
 import sys
 
 def main():
-    sys.stdout = open("./output.txt", "w")
+    sys.stdout = PrintManager()
     sboard = ScoreBoard(1)
     sboard.calculateScore()
     sboard.printAverageEndOfAllGames()

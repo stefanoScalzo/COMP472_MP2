@@ -2,7 +2,8 @@
 # coding: utf-8
 
 from LineEmUp import LineEmUp
-
+from PrintManager import PrintManager
+import sys
 
 class ScoreBoard:
     num_of_games_per_symbol = 10
@@ -19,14 +20,13 @@ class ScoreBoard:
 
     def calculateScore(self):
         
-
+        
+        self.g = LineEmUp(board_size=4, blocks=0, blocks_coord=[], winning_size=4, max_move_time=5, recommend=True, 
+                    player_x=LineEmUp.AI, player_o=LineEmUp.AI, heuristic_x=LineEmUp.E1, 
+                    heuristic_o=LineEmUp.E2, algo1=LineEmUp.ALPHABETA, algo2=LineEmUp.ALPHABETA, d1=7, d2=8)
         for play in range(0, self.num_of_games_per_symbol):
-            g = LineEmUp(board_size=4, blocks=0, blocks_coord=[], winning_size=4, max_move_time=5, recommend=True, 
-                        player_x=LineEmUp.AI, player_o=LineEmUp.AI, heuristic_x=LineEmUp.E1, 
-                        heuristic_o=LineEmUp.E2, algo1=LineEmUp.ALPHABETA, algo2=LineEmUp.ALPHABETA, d1=7, d2=8)
-            g.printInitialGame(False)
-            g.play()
-            stats = g.getStats()
+            self.g.play()
+            stats = self.g.getStats()
             self.average_heuristic_times += stats[0]
             self.average_state_counts += stats[1]
             self.average_depth_averages += stats[2]
@@ -40,13 +40,12 @@ class ScoreBoard:
             self.average_move_counter += stats[5]
             
 
+        self.g = LineEmUp(board_size=4, blocks=0, blocks_coord=[], winning_size=4, max_move_time=5, recommend=True, 
+                    player_x=LineEmUp.AI, player_o=LineEmUp.AI, heuristic_x=LineEmUp.E2, 
+                    heuristic_o=LineEmUp.E1, algo1=LineEmUp.ALPHABETA, algo2=LineEmUp.ALPHABETA, d1=7, d2=8)
         for play in range(0, self.num_of_games_per_symbol):
-            g = LineEmUp(board_size=4, blocks=0, blocks_coord=[], winning_size=4, max_move_time=5, recommend=True, 
-                        player_x=LineEmUp.AI, player_o=LineEmUp.AI, heuristic_x=LineEmUp.E2, 
-                        heuristic_o=LineEmUp.E1, algo1=LineEmUp.ALPHABETA, algo2=LineEmUp.ALPHABETA, d1=7, d2=8)
-            g.printInitialGame(False)
-            g.play()
-            stats = g.getStats()
+            self.g.play()
+            stats = self.g.getStats()
             self.average_heuristic_times += stats[0]
             self.average_state_counts += stats[1]
             self.average_depth_averages += stats[2]
@@ -68,6 +67,10 @@ class ScoreBoard:
         self.average_move_counter += self.average_move_counter/(self.num_of_games_per_symbol*2)
 
     def printAverageEndOfAllGames(self):
+        sys.stdout = PrintManager()
+        sys.stdout.setPath('scoreboard.txt')
+
+        self.g.printInitialGame()
         print("")
         print('i. Average of Average evaluation time of heuristic: ' + str(self.average_heuristic_times))
         print('ii. Average of Total states evaluated: ' + str(self.average_state_counts))  
@@ -77,6 +80,4 @@ class ScoreBoard:
             print("\t" + str(depth) + ": " + str(self.average_total_state_counts_p_depth[depth]))
         print('v. Average of Average ARD: ' + str(self.average_ard_averages))
         print('vi. Average Total Move Count: ' + str(self.average_move_counter))
-
-        #g.play(algo=Game.MINIMAX,player_x=Game.AI,player_o=Game.HUMAN)    
 
