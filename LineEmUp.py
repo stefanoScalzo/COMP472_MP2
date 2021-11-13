@@ -92,20 +92,20 @@ class LineEmUp:
             raise ValueError("Number of blocks does not correspond to list of block coordinates.")
 
         for coord in blocks_coord:
-            self.current_state[coord['x']][coord['y']] = 'B'
+            self.current_state[coord[0]][coord[1]] = 'B'
 
-    def draw_board(self):
+    def draw_board(self,printer):
         """
         Prints the board to the console
 
         :return:
         """
-        print()
+        printer.write("\n")
         for x in range(0, self.board_size):
             for y in range(0, self.board_size):
-                print(F'{self.current_state[x][y]}', end="  ")
-            print()
-        print()
+                printer.write(F'{self.current_state[x][y]}    ')
+            printer.write("\n")
+        printer.write("\n")
         
     def is_valid_play(self, x, y):
         """
@@ -292,6 +292,11 @@ class LineEmUp:
 
         current_depth = current_depth + 1
 
+        rows = [*range(0,self.board_size)]
+        random.shuffle(rows)
+        cols = [*range(0,self.board_size)]
+        random.shuffle(cols)
+
         # Iterate through every possible move (i, j)
         for i in range(0, self.board_size):
             for j in range(0, self.board_size):
@@ -300,22 +305,18 @@ class LineEmUp:
                 if self.current_state[i][j] == '.':
 
                     # Update timer
-                    move_time = time.time() - self.move_start
-
-                    # If timer has expired, stop traversing and set the current depth as max depth
-                    if not self.timer_is_up and move_time >= self.max_move_time:
-                        self.max_depth_adjusted = current_depth
-                        self.timer_is_up = True
+                    if time.time() - self.move_start > self.max_move_time :
+                        self.timer_is_up = True                    
 
                     # end traversal if resources are spent
-                    end_of_traversal = current_depth == self.max_depth_adjusted
+                    end_of_traversal = current_depth == self.max_depth
                     #print(str(end_of_traversal) + " " + str(self.timer_is_up) + " " + str(self.is_end()))
 
                     if max_turn:
                         self.current_state[i][j] = 'O'
-                        if end_of_traversal or self.is_end():
-                            #print("I'VE ARRIVED")
+                        if end_of_traversal or self.is_end() or self.timer_is_up:
                             self.depths.append(current_depth)
+                            self.ard_per_move.append(current_depth)
                             if self.heuristic == self.E1 :
                                 v = self.e()
                             else :
@@ -328,8 +329,9 @@ class LineEmUp:
                             y = j
                     else:
                         self.current_state[i][j] = 'X'
-                        if end_of_traversal or self.is_end():
+                        if end_of_traversal or self.is_end() or self.timer_is_up:
                             self.depths.append(current_depth)
+                            self.ard_per_move.append(current_depth)
                             if self.heuristic == self.E1 :
                                 v = self.e()
                             else :
@@ -347,6 +349,9 @@ class LineEmUp:
 
                     # Reset cell so that state is not permanently modified by A.I. traversal
                     self.current_state[i][j] = '.'
+                    
+                    if(self.timer_is_up):
+                        return value, x ,y
         
         # add state count to depth
         if current_depth not in self.state_count_p_depth:
@@ -633,38 +638,70 @@ class LineEmUp:
 
         return winning_o-winning_x
                     
-    def printInitialGame(self):
-        print("n: "+ str(self.board_size))
-        print("b: "+ str(self.blocks))
-        print("s: "+ str(self.winning_size))
-        print("t: " + str(self.max_move_time))
+    def printInitialGame(self,printer):
+        printer.write("n: "+ str(self.board_size)+'\n')
+        printer.write("b: "+ str(self.blocks)+'\n')
+        printer.write("s: "+ str(self.winning_size)+'\n')
+        printer.write("t: " + str(self.max_move_time)+'\n')
         if(self.player_x == self.AI):
-            print("Player X: AI")
+            printer.write("Player X: AI"+'\n')
         else:
-            print("Player X: Human")
+            printer.write("Player X: Human"+'\n')
             
         if(self.player_o == self.AI):
-            print("Player O: AI")
+            printer.write("Player O: AI"+'\n')
         else:
-            print("Player O: Human")
-        print("Player O: "+ str(self.player_o))
+            printer.write("Player O: Human"+'\n')
+        printer.write("Player O: "+ str(self.player_o))
         if(self.algo1 == self.ALPHABETA):
-            print("Algo for X: ALPHABETA")
+            printer.write("Algo for X: ALPHABETA"+'\n')
         else:
-            print("Algo for ): MINIMAX")
+            printer.write("Algo for ): MINIMAX"+'\n')
         if(self.algo2 == self.ALPHABETA):
-            print("Algo for O: ALPHABETA")
+            printer.write("Algo for O: ALPHABETA"+'\n')
         else:
-            print("Algo for O: MINIMAX")
+            printer.write("Algo for O: MINIMAX"+'\n')
 
         if(self.heuristic_x == self.E1):
-            print("Player X heuristic: E1")
+            printer.write("Player X heuristic: E1"+'\n')
         else:
-            print("Player X heuristic: E2")
+            printer.write("Player X heuristic: E2"+'\n')
         if(self.heuristic_o == self.E1):
-            print("Player O heuristic: E1")
+            printer.write("Player O heuristic: E1"+'\n')
         else:
-            print("Player O heuristic: E2")
+            printer.write("Player O heuristic: E2"+'\n')
+    
+    def printIntialGameToFile(self, file):
+        file.write("n: "+ str(self.board_size)+'\n')
+        file.write("b: "+ str(self.blocks)+'\n')
+        file.write("s: "+ str(self.winning_size)+'\n')
+        file.write("t: " + str(self.max_move_time)+'\n')
+        if(self.player_x == self.AI):
+            file.write("Player X: AI"+'\n')
+        else:
+            file.write("Player X: Human"+'\n')
+            
+        if(self.player_o == self.AI):
+            file.write("Player O: AI"+'\n')
+        else:
+            file.write("Player O: Human"+'\n')
+        if(self.algo1 == self.ALPHABETA):
+            file.write("Algo for X: ALPHABETA"+'\n')
+        else:
+            file.write("Algo for ): MINIMAX"+'\n')
+        if(self.algo2 == self.ALPHABETA):
+            file.write("Algo for O: ALPHABETA"+'\n')
+        else:
+            file.write("Algo for O: MINIMAX"+'\n')
+
+        if(self.heuristic_x == self.E1):
+            file.write("Player X heuristic: E1"+'\n')
+        else:
+            file.write("Player X heuristic: E2"+'\n')
+        if(self.heuristic_o == self.E1):
+            file.write("Player O heuristic: E1"+'\n')
+        else:
+            file.write("Player O heuristic: E2"+'\n')
 
     def getStats(self):
         return (sum(self.total_heuristic_times)/len(self.total_heuristic_times), 
@@ -672,24 +709,24 @@ class LineEmUp:
         sum(self.ard_averages)/len(self.ard_averages),self.move_counter)
 
     def play(self):
-        sys.stdout = PrintManager()
-        sys.stdout.setPath(F'gameTrace-{self.board_size}{self.blocks}{self.winning_size}{self.max_move_time}.txt')
+        printer = PrintManager()
+        printer.setPath(F'gameTrace-{self.board_size}{self.blocks}{self.winning_size}{self.max_move_time}.txt')
 
-        self.printInitialGame()
+        self.printInitialGame(printer)
         game_over = False
         self.move_counter = 0
         while not game_over:
-            self.draw_board()
+            self.draw_board(printer)
             if self.check_end():
                 game_over = True
-                print('i. Average evaluation time of heuristic: ' + str(1.0*sum(self.total_heuristic_times)/len(self.total_heuristic_times)))
-                print('ii. Total states evaluated: ' + str(self.total_state_counts))  
-                print('iii. Average of average depths: '+ str(sum(self.depth_averages)/len(self.depth_averages)))
-                print('iv. Total number of states evaluated at each depth: ') 
+                printer.write('i. Average evaluation time of heuristic: ' + str(1.0*sum(self.total_heuristic_times)/len(self.total_heuristic_times))+'\n')
+                printer.write('ii. Total states evaluated: ' + str(self.total_state_counts)+'\n')  
+                printer.write('iii. Average of average depths: '+ str(sum(self.depth_averages)/len(self.depth_averages))+'\n')
+                printer.write('iv. Total number of states evaluated at each depth: ') 
                 for depth in sorted(self.total_state_counts_p_depth.keys(), reverse=True):
-                    print("\t" + str(depth) + ": " + str(self.total_state_counts_p_depth[depth]))
-                print('v. Average ARD: ' + str(sum(self.ard_averages)/len(self.ard_averages)))
-                print('vi. Total Move Count: ' + str(self.move_counter))
+                    printer.write("\t" + str(depth) + ": " + str(self.total_state_counts_p_depth[depth])+'\n')
+                printer.write('v. Average ARD: ' + str(sum(self.ard_averages)/len(self.ard_averages))+'\n')
+                printer.write('vi. Total Move Count: ' + str(self.move_counter)+'\n')
                 return
 
             self.move_start = time.time()
@@ -710,21 +747,21 @@ class LineEmUp:
             eval_time = round(end - self.move_start, 7)
             self.move_counter += 1
             
-            print('Heuristic returned: ' + str(v))
-            print(F'i. Evaluation time: {eval_time}s')
-            print('i. Heuristic evaluation time: ' + str(sum(self.heuristic_times)))
-            print("ii. Number of states evaluated: " + str(self.state_count))
-            print("iii. Number of states evaluated per depth:")
+            printer.write('Heuristic returned: ' + str(v)+'\n')
+            printer.write(F'i. Evaluation time: {eval_time}s')
+            printer.write('i. Heuristic evaluation time: ' + str(sum(self.heuristic_times))+'\n')
+            printer.write("ii. Number of states evaluated: " + str(self.state_count)+'\n')
+            printer.write("iii. Number of states evaluated per depth:")
             for depth in sorted(self.state_count_p_depth.keys(), reverse=True):
-                print("\t"+str(depth) + ": " + str(self.state_count_p_depth[depth]))
-            print("iv. Average depths of heuristic evaluation: " + str(round(1.0*sum(self.depths)/len(self.depths),4)))
-            print("v. ARD: "+ str(self.ard_per_move[0]))
+                printer.write("\t"+str(depth) + ": " + str(self.state_count_p_depth[depth])+'\n')
+            printer.write("iv. Average depths of heuristic evaluation: " + str(round(1.0*sum(self.depths)/len(self.depths),4))+'\n')
+            printer.write("v. ARD: "+ str(self.ard_per_move[0])+'\n')
             if (self.player_turn == 'X' and self.player_x == self.HUMAN) or (self.player_turn == 'O' and self.player_o == self.HUMAN):
                     if self.recommend:
-                        print(F'Recommended move: x = {x}, y = {y}')
+                        print(F'Recommended move: x = {x}, y = {y}')+'\n'
                     (x,y) = self.input_move()
             elif (self.player_turn == 'X' and self.player_x == self.AI) or (self.player_turn == 'O' and self.player_o == self.AI):
-                        print(F'Player {self.player_turn} under AI control plays: x = {x}, y = {y}')
+                        print(F'Player {self.player_turn} under AI control plays: x = {x}, y = {y}'+'\n')
 
             # store stat variables before resetting
             self.total_heuristic_times.extend(self.heuristic_times)

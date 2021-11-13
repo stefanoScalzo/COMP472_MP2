@@ -14,6 +14,7 @@ class PrintManager(object):
         self.log.write(message) 
 
     def setPath(self, path):
+        self.log.close()
         self.log = open(path, "w")
 
     def flush(self):
