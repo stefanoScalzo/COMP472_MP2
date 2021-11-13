@@ -663,15 +663,15 @@ class LineEmUp:
         print("s: "+ str(self.winning_size))
         print("t: " + str(self.max_move_time))
         if(self.player_w == self.AI):
-            print("Player X: AI")
+            print("Player White: AI")
         else:
-            print("Player X: Human")
+            print("Player White: Human")
             
         if(self.player_b == self.AI):
-            print("Player O: AI")
+            print("Player Black: AI")
         else:
-            print("Player O: Human")
-        print("Player O: "+ str(self.player_b))
+            print("Player Black: Human")
+
         if(self.a1 == self.ALPHABETA):
             print("Algo for X: ALPHABETA")
         else:
@@ -682,13 +682,13 @@ class LineEmUp:
             print("Algo for O: MINIMAX")
 
         if(self.heuristic_w == self.E1):
-            print("Player X heuristic: E1")
+            print("Player White heuristic: E1")
         else:
-            print("Player X heuristic: E2")
+            print("Player White heuristic: E2")
         if(self.heuristic_b == self.E1):
-            print("Player O heuristic: E1")
+            print("Player Black heuristic: E1")
         else:
-            print("Player O heuristic: E2")
+            print("Player Black heuristic: E2")
 
     def getStats(self):
         """
