@@ -643,6 +643,8 @@ class LineEmUp:
         printer.write("b: "+ str(self.blocks)+'\n')
         printer.write("s: "+ str(self.winning_size)+'\n')
         printer.write("t: " + str(self.max_move_time)+'\n')
+        printer.write("d1: "+str(self.d1)+'\n')
+        printer.write("d2: "+ str(self.d2)+'\n')
         if(self.player_x == self.AI):
             printer.write("Player X: AI"+'\n')
         else:
@@ -652,7 +654,6 @@ class LineEmUp:
             printer.write("Player O: AI"+'\n')
         else:
             printer.write("Player O: Human"+'\n')
-        printer.write("Player O: "+ str(self.player_o))
         if(self.algo1 == self.ALPHABETA):
             printer.write("Algo for X: ALPHABETA"+'\n')
         else:
@@ -676,6 +677,8 @@ class LineEmUp:
         file.write("b: "+ str(self.blocks)+'\n')
         file.write("s: "+ str(self.winning_size)+'\n')
         file.write("t: " + str(self.max_move_time)+'\n')
+        file.write("d1: "+str(self.d1)+'\n')
+        file.write("d2: "+ str(self.d2)+'\n')
         if(self.player_x == self.AI):
             file.write("Player X: AI"+'\n')
         else:
@@ -722,7 +725,7 @@ class LineEmUp:
                 printer.write('i. Average evaluation time of heuristic: ' + str(1.0*sum(self.total_heuristic_times)/len(self.total_heuristic_times))+'\n')
                 printer.write('ii. Total states evaluated: ' + str(self.total_state_counts)+'\n')  
                 printer.write('iii. Average of average depths: '+ str(sum(self.depth_averages)/len(self.depth_averages))+'\n')
-                printer.write('iv. Total number of states evaluated at each depth: ') 
+                printer.write('iv. Total number of states evaluated at each depth: \n') 
                 for depth in sorted(self.total_state_counts_p_depth.keys(), reverse=True):
                     printer.write("\t" + str(depth) + ": " + str(self.total_state_counts_p_depth[depth])+'\n')
                 printer.write('v. Average ARD: ' + str(sum(self.ard_averages)/len(self.ard_averages))+'\n')

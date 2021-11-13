@@ -1,0 +1,112 @@
+n: 4
+b: 4
+s: 3
+t: 5
+Player X: AI
+Player O: AI
+Player O: 1Algo for ): MINIMAX
+Algo for O: MINIMAX
+Player X heuristic: E1
+Player O heuristic: E2
+
+B    .    .    B    
+.    .    .    .    
+.    .    .    .    
+B    .    .    B    
+
+Heuristic returned: 6
+i. Evaluation time: 0.5008926si. Heuristic evaluation time: 0.15436196327209473
+ii. Number of states evaluated: 737376
+iii. Number of states evaluated per depth:	6: 33128918784
+	5: 4380351696
+	4: 487034136
+	3: 49035300
+	2: 4792932
+	1: 737376
+iv. Average depths of heuristic evaluation: 5.9918
+v. ARD: 6
+
+B    .    .    B    
+.    X    .    .    
+.    .    .    .    
+B    .    .    B    
+
+Heuristic returned: -20.0
+i. Evaluation time: 2.0327604si. Heuristic evaluation time: 1.7524585723876953
+ii. Number of states evaluated: 348943
+iii. Number of states evaluated per depth:	6: 8410290761
+	5: 1261907438
+	4: 174117700
+	3: 19500242
+	2: 2110623
+	1: 348943
+iv. Average depths of heuristic evaluation: 5.9877
+v. ARD: 6
+
+B    O    .    B    
+.    X    .    .    
+.    .    .    .    
+B    .    .    B    
+
+Heuristic returned: 6
+i. Evaluation time: 0.1437247si. Heuristic evaluation time: 0.034010887145996094
+ii. Number of states evaluated: 134460
+iii. Number of states evaluated per depth:	6: 1380615562
+	5: 296803380
+	4: 43417420
+	3: 5857919
+	2: 709780
+	1: 134460
+iv. Average depths of heuristic evaluation: 5.9365
+v. ARD: 5
+
+B    O    .    B    
+.    X    X    .    
+.    .    .    .    
+B    .    .    B    
+
+Heuristic returned: -33.33333333333333
+i. Evaluation time: 0.1691651si. Heuristic evaluation time: 0.11012959480285645
+ii. Number of states evaluated: 37181
+iii. Number of states evaluated per depth:	6: 125865855
+	5: 26670428
+	4: 7576236
+	3: 1097524
+	2: 195797
+	1: 37181
+iv. Average depths of heuristic evaluation: 5.9211
+v. ARD: 2
+
+B    O    O    B    
+.    X    X    .    
+.    .    .    .    
+B    .    .    B    
+
+Heuristic returned: 6
+i. Evaluation time: 0.0119178si. Heuristic evaluation time: 0.0016994476318359375
+ii. Number of states evaluated: 7802
+iii. Number of states evaluated per depth:	6: 4711520
+	5: 3022920
+	4: 607596
+	3: 171858
+	2: 27606
+	1: 7802
+iv. Average depths of heuristic evaluation: 5.6052
+v. ARD: 1
+
+B    O    O    B    
+X    X    X    .    
+.    .    .    .    
+B    .    .    B    
+
+i. Average evaluation time of heuristic: 2.08517968882386e-06
+ii. Total states evaluated: 6328810
+iii. Average of average depths: 5.888478320468509
+iv. Total number of states evaluated at each depth: 	6: 215252012410
+	5: 29843779310
+	4: 3563765440
+	3: 378314215
+	2: 39183690
+	1: 6328810
+v. Average ARD: 4.0
+vi. Total Move Count: 5
