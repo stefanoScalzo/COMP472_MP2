@@ -6,24 +6,43 @@ from PrintManager import PrintManager
 import sys
 
 class ScoreBoard:
-    num_of_games_per_symbol = 10
-    average_heuristic_times = 0
-    average_state_counts = 0
-    average_depth_averages = 0
-    average_total_state_counts_p_depth = {}
-    average_ard_averages = 0
-    average_move_counter = 0
-    destination =  './scoreboard.txt'
+    """
+    Simulates 2*r LineEmUp games and writes relevant statistics to a file
+
+    Attributes:
+        num_of_games_per_symbol - number of games to be simulated per color (i.e. total games = 2*r)
+        destination - filepath to be written to
+        average_heuristic_times
+        average_state_counts
+        average_depth_averages
+        average_total_state_counts_p_depth
+        average_ard_averages
+        average_move_counter
+
+    * Note that almost all attributes are simply averages of the averages calculated at the end of each game
+
+    """
 
     def __init__(self, r=10):
         self.num_of_games_per_symbol = r
+        self.average_heuristic_times = 0
+        self.average_state_counts = 0
+        self.average_depth_averages = 0
+        self.average_total_state_counts_p_depth = {}
+        self.average_ard_averages = 0
+        self.average_move_counter = 0
+        self.destination = 'scoreboard.txt'
 
     def calculateScore(self):
-        
-        
-        self.g = LineEmUp(board_size=4, blocks=0, blocks_coord=[], winning_size=4, max_move_time=5, recommend=True, 
-                    player_x=LineEmUp.AI, player_o=LineEmUp.AI, heuristic_x=LineEmUp.E1, 
-                    heuristic_o=LineEmUp.E2, algo1=LineEmUp.ALPHABETA, algo2=LineEmUp.ALPHABETA, d1=7, d2=8)
+        """
+        Runs 2*r simulations of LineEmUp and calculates all all relevant statistics.
+
+        :return:
+        """
+
+        self.g = LineEmUp(board_size=4, blocks=0, blocks_coord=[], winning_size=4, max_move_time=5, recommend=True,
+                          player_w=LineEmUp.AI, player_o=LineEmUp.AI, heuristic_w=LineEmUp.E1,
+                          heuristic_o=LineEmUp.E2, algo1=LineEmUp.ALPHABETA, algo2=LineEmUp.ALPHABETA, d1=7, d2=8)
         for play in range(0, self.num_of_games_per_symbol):
             self.g.play()
             stats = self.g.getStats()
@@ -40,9 +59,9 @@ class ScoreBoard:
             self.average_move_counter += stats[5]
             
 
-        self.g = LineEmUp(board_size=4, blocks=0, blocks_coord=[], winning_size=4, max_move_time=5, recommend=True, 
-                    player_x=LineEmUp.AI, player_o=LineEmUp.AI, heuristic_x=LineEmUp.E2, 
-                    heuristic_o=LineEmUp.E1, algo1=LineEmUp.ALPHABETA, algo2=LineEmUp.ALPHABETA, d1=7, d2=8)
+        self.g = LineEmUp(board_size=4, blocks=0, blocks_coord=[], winning_size=4, max_move_time=5, recommend=True,
+                          player_w=LineEmUp.AI, player_o=LineEmUp.AI, heuristic_w=LineEmUp.E2,
+                          heuristic_o=LineEmUp.E1, algo1=LineEmUp.ALPHABETA, algo2=LineEmUp.ALPHABETA, d1=7, d2=8)
         for play in range(0, self.num_of_games_per_symbol):
             self.g.play()
             stats = self.g.getStats()
@@ -67,6 +86,14 @@ class ScoreBoard:
         self.average_move_counter += self.average_move_counter/(self.num_of_games_per_symbol*2)
 
     def printAverageEndOfAllGames(self):
+        """
+        Prints the results to a file. calculateScore() must first be called.
+
+        :return:
+        """
+        if self.g is None:
+            raise ValueError("Game(s) have not been instantiated. calculateScore() must first be called. ")
+
         sys.stdout = PrintManager()
         sys.stdout.setPath('scoreboard.txt')
 
