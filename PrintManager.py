@@ -18,6 +18,7 @@ class PrintManager(object):
 
     """ Custom method to update the path of the file being written to """
     def setPath(self, path):
+        self.log.close()
         self.log = open(path, "w")
 
     def flush(self):

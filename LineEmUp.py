@@ -9,7 +9,6 @@ import sys
 from PrintManager import PrintManager
 
 class LineEmUp:
-
     MINIMAX = 0
     ALPHABETA = 1
     HUMAN = 0
@@ -17,8 +16,8 @@ class LineEmUp:
     E1 = 0
     E2 = 1
 
-    def __init__(self, board_size=3, blocks=0, blocks_coord=[], winning_size=3, d1=7, d2=7,
-                 max_move_time=5, player_w = AI, player_b = AI, recommend=True, heuristic_w=E2, heuristic_b=E2, a1=ALPHABETA, a2=ALPHABETA):
+    def __init__(self, board_size=3, blocks=0, blocks_coord=[], winning_size=3, d1=7, d2=7, 
+                    max_move_time=5, player_w = AI, player_b = AI, recommend=True, heuristic_w=E2, heuristic_b=E2, a1=ALPHABETA, a2=ALPHABETA):
         """
         Constructor for the game.
 
@@ -61,6 +60,7 @@ class LineEmUp:
         Initializes the board and necessary variables so that the game can be restarted with same parameters
         :return:
         """
+
         # variables required for stats
         self.heuristic_times = []
         self.total_heuristic_times = []
@@ -134,7 +134,7 @@ class LineEmUp:
         :param y:
         :return: true or false
         """
-        if not self.valid_coord(x, y) :
+        if not self.valid_coord(x, y):
             return False
         elif self.current_state[x][y] != '.':
             return False
@@ -162,8 +162,8 @@ class LineEmUp:
             - The board is full (i.e. a tie)
 
         Returns any of the following:
-            - X if X is the winner
-            - O if O is the winner
+            - W if White is the winner
+            - B if Black is the winner
             - . if it's a tie
             - None if the game is not over
 
@@ -287,16 +287,15 @@ class LineEmUp:
             self.heuristic = self.heuristic_w
             self.algo = self.a1
 
-
         return self.player_turn
 
     def minimax(self, current_depth=0, max_turn=False):
         """
-        Minimizing for 'W' and maximizing for 'B
+        Minimizing for 'X' and maximizing for 'O'
         Possible values are:
-            -inf - win for 'W'
+            -101 - win for 'X'
               0  - a tie
-            inf  - loss for 'W'
+            101  - loss for 'X'
 
         :param current_depth: required to determine when to stop traversing
         :param max_turn: boolean to decide which computation will be used (max or min)
@@ -335,7 +334,7 @@ class LineEmUp:
                             self.depths.append(current_depth)
                             if self.heuristic == self.E1 :
                                 v = self.e()
-                            else :
+                            else:
                                 v = self.e2(current_depth)
                         else:
                             (v, _, _) = self.minimax(current_depth, max_turn=False)
@@ -347,12 +346,11 @@ class LineEmUp:
                         self.current_state[i][j] = 'W'
                         if end_of_traversal or self.is_end():
                             self.depths.append(current_depth)
-                            if self.heuristic == self.E1 :
+                            if self.heuristic == self.E1:
                                 v = self.e()
-                            else :
+                            else:
                                 v = self.e2(current_depth)
                         else:
-                            # current_depth = current_depth + 1
                             (v, _, _) = self.minimax(current_depth, max_turn=True)
                         if v < value:
                             value = v
@@ -371,7 +369,6 @@ class LineEmUp:
 
         self.state_count_p_depth[current_depth] += self.state_count
 
-        #print("LEAVING STATE SO NOT IN INFINITE LOOP WOO!")
         return value, x, y
 
     def alphabeta(self, current_depth=0, alpha=-100, beta=100, max_turn=False):
@@ -425,9 +422,9 @@ class LineEmUp:
                             self.depths.append(current_depth)
                             self.ard_per_move.append(current_depth)
 
-                            if self.heuristic == self.E1 :
+                            if self.heuristic == self.E1:
                                 v = self.e()
-                            else :
+                            else:
                                 v= self.e2(current_depth)
                         else:
                             (v, _, _) = self.alphabeta(current_depth, alpha, beta, max_turn=False)
@@ -443,11 +440,10 @@ class LineEmUp:
 
                             if self.heuristic == self.E1 :
                                 v = self.e()
-                            else :
+                            else:
                                 v = self.e2(current_depth)
 
                         else:
-                            #current_depth = current_depth + 1
                             (v, _, _) = self.alphabeta(current_depth, alpha, beta, max_turn=True)
                         if v < value:
                             value = v
@@ -461,7 +457,7 @@ class LineEmUp:
                     self.current_state[i][j] = '.'
 
                     if(self.timer_is_up):
-                        return value, x ,y
+                        return value, x, y
                         
                     # Prune unnecessary siblings
                     if max_turn:
@@ -496,20 +492,20 @@ class LineEmUp:
         for row in self.current_state:
             for col in range(len(row)):
                 if row[col] == 'B':
-                    count_b = count_b + 1
+                    count_b += 1
                 elif row[col] == 'W':
-                    count_w = count_w + 1
+                    count_w += 1
             
             if count_b == self.winning_size:
                 score = score + 2
-            if count_b >= self.winning_size/2:
+            if count_w >= self.winning_size/2:
                 score = score + 1
             else:
                 score = score + 1
 
         self.heuristic_times.append(time.time() - start)
         
-        return score +  count_b
+        return score + count_b
     
     def e2(self, current_depth):
         """
@@ -563,9 +559,9 @@ class LineEmUp:
 
                 # increment winning score accordingly
                 if streak == self.winning_size:
-                    if winner == 'W':
+                    if winner == 'X':
                         winning_w += 1
-                    elif winner == 'B':
+                    elif winner == 'O':
                         winning_b += 1
                     elif winner == '.':
                         winning_w += 1
@@ -673,13 +669,13 @@ class LineEmUp:
             print("Player Black: Human")
 
         if(self.a1 == self.ALPHABETA):
-            print("Algo for X: ALPHABETA")
+            print("Algo for White: ALPHABETA")
         else:
-            print("Algo for ): MINIMAX")
+            print("Algo for White: MINIMAX")
         if(self.a2 == self.ALPHABETA):
-            print("Algo for O: ALPHABETA")
+            print("Algo for Black: ALPHABETA")
         else:
-            print("Algo for O: MINIMAX")
+            print("Algo for Back: MINIMAX")
 
         if(self.heuristic_w == self.E1):
             print("Player White heuristic: E1")
@@ -696,7 +692,7 @@ class LineEmUp:
         """
         return (sum(self.total_heuristic_times)/len(self.total_heuristic_times), 
         self.total_state_counts,sum(self.depth_averages)/len(self.depth_averages),self.total_state_counts_p_depth,
-        sum(self.ard_averages)/len(self.ard_averages),self.move_counter)
+        sum(self.ard_averages)/len(self.ard_averages), self.move_counter)
 
     def play(self):
         """
@@ -779,3 +775,4 @@ class LineEmUp:
             self.switch_player()
 
         self.initialize_game()       
+    
