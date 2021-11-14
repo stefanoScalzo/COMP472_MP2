@@ -41,8 +41,8 @@ class ScoreBoard:
         """
 
         self.g = LineEmUp(board_size=4, blocks=0, blocks_coord=[], winning_size=4, max_move_time=5, recommend=True,
-                          player_w=LineEmUp.AI, player_o=LineEmUp.AI, heuristic_w=LineEmUp.E1,
-                          heuristic_o=LineEmUp.E2, algo1=LineEmUp.ALPHABETA, algo2=LineEmUp.ALPHABETA, d1=7, d2=8)
+                          player_w=LineEmUp.AI, player_b=LineEmUp.AI, heuristic_w=LineEmUp.E1,
+                          heuristic_b=LineEmUp.E2, a1=LineEmUp.ALPHABETA, a2=LineEmUp.ALPHABETA, d1=7, d2=8)
         for play in range(0, self.num_of_games_per_symbol):
             self.g.play()
             stats = self.g.getStats()
@@ -60,8 +60,8 @@ class ScoreBoard:
             
 
         self.g = LineEmUp(board_size=4, blocks=0, blocks_coord=[], winning_size=4, max_move_time=5, recommend=True,
-                          player_w=LineEmUp.AI, player_o=LineEmUp.AI, heuristic_w=LineEmUp.E2,
-                          heuristic_o=LineEmUp.E1, algo1=LineEmUp.ALPHABETA, algo2=LineEmUp.ALPHABETA, d1=7, d2=8)
+                          player_w=LineEmUp.AI, player_b=LineEmUp.AI, heuristic_w=LineEmUp.E2,
+                          heuristic_b=LineEmUp.E1, a1=LineEmUp.ALPHABETA, a2=LineEmUp.ALPHABETA, d1=7, d2=8)
         for play in range(0, self.num_of_games_per_symbol):
             self.g.play()
             stats = self.g.getStats()
