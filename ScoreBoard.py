@@ -78,8 +78,8 @@ class ScoreBoard:
             self.average_move_counter += stats[5]
 
         self.g = LineEmUp(board_size=n, blocks=b, blocks_coord=blocks, winning_size=s, max_move_time=t, recommend=True,
-                          player_w=LineEmUp.AI, player_b=LineEmUp.AI, heuristic_w=LineEmUp.E1,
-                          heuristic_b=LineEmUp.E2, a1=a1, a2=a2, d1=d1, d2=d2)
+                          player_w=LineEmUp.AI, player_b=LineEmUp.AI, heuristic_w=LineEmUp.E2,
+                          heuristic_b=LineEmUp.E1, a1=a1, a2=a2, d1=d1, d2=d2)
         for play in range(0, self.num_of_games_per_symbol):
             self.g.play()
             stats = self.g.getStats()
@@ -100,12 +100,12 @@ class ScoreBoard:
 
         self.average_heuristic_times = self.average_heuristic_times / (self.num_of_games_per_symbol * 2)
         self.average_state_counts = self.average_state_counts / (self.num_of_games_per_symbol * 2)
-        self.average_depth_averages += self.average_depth_averages / (self.num_of_games_per_symbol * 2)
+        self.average_depth_averages = self.average_depth_averages / (self.num_of_games_per_symbol * 2)
         for depth in stats[3]:
             self.average_total_state_counts_p_depth[depth] = self.average_total_state_counts_p_depth[depth] / (
                     self.num_of_games_per_symbol * 2)
         self.average_ard_averages = self.average_ard_averages / (self.num_of_games_per_symbol * 2)
-        self.average_move_counter += self.average_move_counter / (self.num_of_games_per_symbol * 2)
+        self.average_move_counter = self.average_move_counter / (self.num_of_games_per_symbol * 2)
 
     def printAverageEndOfAllGames(self, id):
         """

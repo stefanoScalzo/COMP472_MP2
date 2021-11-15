@@ -357,6 +357,11 @@ class LineEmUp:
 
                     # increase state count
                     self.state_count = self.state_count + 1
+                     # add state count to depth
+                    if current_depth not in self.state_count_p_depth:
+                        self.state_count_p_depth[current_depth] = 0
+
+                    self.state_count_p_depth[current_depth] += 1
 
                     # Reset cell so that state is not permanently modified by A.I. traversal
                     self.current_state[i][j] = '.'
@@ -364,11 +369,9 @@ class LineEmUp:
                     if (self.timer_is_up):
                         return value, x, y
 
-        # add state count to depth
-        if current_depth not in self.state_count_p_depth:
-            self.state_count_p_depth[current_depth] = 0
-
-        self.state_count_p_depth[current_depth] += self.state_count
+        self.ard_per_move[0] = sum(self.ard_per_move) / len(self.ard_per_move)
+        self.ard_per_move = self.ard_per_move[0:]
+       
 
         # print("LEAVING STATE SO NOT IN INFINITE LOOP WOO!")
         return value, x, y
@@ -454,6 +457,11 @@ class LineEmUp:
 
                     # increase state count
                     self.state_count = self.state_count + 1
+                    # add state count to depth
+                    if current_depth not in self.state_count_p_depth:
+                        self.state_count_p_depth[current_depth] = 0
+
+                    self.state_count_p_depth[current_depth] += 1
 
                     # Reset cell so that state is not permanently modified by A.I. traversal
                     self.current_state[i][j] = '.'
@@ -475,11 +483,7 @@ class LineEmUp:
 
         self.ard_per_move[0] = sum(self.ard_per_move) / len(self.ard_per_move)
         self.ard_per_move = self.ard_per_move[0:]
-        # add state count to depth
-        if current_depth not in self.state_count_p_depth:
-            self.state_count_p_depth[current_depth] = 0
-
-        self.state_count_p_depth[current_depth] += self.state_count
+        
 
         return value, x, y
 
@@ -775,12 +779,13 @@ class LineEmUp:
             printer.write(F'i. Evaluation time: {eval_time}s')
             printer.write('i. Heuristic evaluation time: ' + str(sum(self.heuristic_times)) + '\n')
             printer.write("ii. Number of states evaluated: " + str(self.state_count) + '\n')
-            printer.write("iii. Number of states evaluated per depth:")
+            printer.write("iii. Number of states evaluated per depth:\n")
             for depth in sorted(self.state_count_p_depth.keys(), reverse=True):
                 printer.write("\t" + str(depth) + ": " + str(self.state_count_p_depth[depth]) + '\n')
             printer.write("iv. Average depths of heuristic evaluation: " + str(
-                round(1.0 * sum(self.depths) / len(self.depths), 4)) + '\n')
+                (1.0 * sum(self.depths) / len(self.depths))) + '\n')
             printer.write("v. ARD: " + str(self.ard_per_move[0]) + '\n')
+
             if (self.player_turn == 'W' and self.player_w == self.HUMAN) or (
                     self.player_turn == 'B' and self.player_b == self.HUMAN):
                 if self.recommend:
