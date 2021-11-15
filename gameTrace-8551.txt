@@ -11,642 +11,722 @@ Algo for Black: ALPHABETA
 Player White heuristic: E2
 Player Black heuristic: E1
 
+.    .    .    .    .    .    x    .    
+.    .    .    .    x    .    x    .    
 .    .    .    .    .    .    .    .    
 .    .    .    .    .    .    .    .    
 .    .    .    .    .    .    .    .    
-.    .    x    .    .    .    .    .    
-.    .    x    .    .    .    .    .    
 .    .    .    x    .    .    .    .    
-.    .    .    .    .    x    .    .    
+.    x    .    .    .    .    .    .    
 .    .    .    .    .    .    .    .    
 
-Heuristic returned: -3
-i. Evaluation time: 0.0294876si. Heuristic evaluation time: 0.02854299545288086
-ii. Number of states evaluated: 1216
+Heuristic returned: -1
+i. Evaluation time: 0.0163984si. Heuristic evaluation time: 0.01570892333984375
+ii. Number of states evaluated: 672
 iii. Number of states evaluated per depth:
-	2: 1156
-	1: 60
+	2: 613
+	1: 59
 iv. Average depths of heuristic evaluation: 2.0
 v. ARD: 2.0
 
+.    .    .    .    .    .    x    .    
+.    .    .    .    x    .    x    .    
 .    .    .    .    .    .    .    .    
 .    .    .    .    .    .    .    .    
-.    .    .    .    .    .    .    .    
-.    .    x    .    W    .    .    .    
-.    .    x    .    .    .    .    .    
+.    .    .    .    .    W    .    .    
 .    .    .    x    .    .    .    .    
-.    .    .    .    .    x    .    .    
+.    x    .    .    .    .    .    .    
 .    .    .    .    .    .    .    .    
 
-Heuristic returned: 11
-i. Evaluation time: 1.0012319si. Heuristic evaluation time: 0.14787864685058594
-ii. Number of states evaluated: 157571
+Heuristic returned: 10
+i. Evaluation time: 1.000453si. Heuristic evaluation time: 0.1512434482574463
+ii. Number of states evaluated: 155968
 iii. Number of states evaluated per depth:
-	6: 148828
-	5: 5833
-	4: 2755
+	6: 147289
+	5: 5745
+	4: 2778
 	3: 105
-	2: 49
+	2: 50
 	1: 1
-iv. Average depths of heuristic evaluation: 6.0
+iv. Average depths of heuristic evaluation: 5.999986421345644
 v. ARD: 6.0
 
+.    .    .    .    .    .    x    .    
+.    .    .    .    x    .    x    .    
 .    .    .    .    .    .    .    .    
 .    .    .    .    .    .    .    .    
-.    .    .    .    .    .    .    B    
-.    .    x    .    W    .    .    .    
-.    .    x    .    .    .    .    .    
+.    .    .    .    .    W    .    .    
 .    .    .    x    .    .    .    .    
-.    .    .    .    .    x    .    .    
-.    .    .    .    .    .    .    .    
-
-Heuristic returned: -6
-i. Evaluation time: 0.0340881si. Heuristic evaluation time: 0.03272438049316406
-ii. Number of states evaluated: 766
-iii. Number of states evaluated per depth:
-	2: 708
-	1: 58
-iv. Average depths of heuristic evaluation: 2.0
-v. ARD: 2.0
-
-.    .    .    .    .    .    .    .    
-.    .    .    .    .    .    .    .    
-.    .    .    .    .    .    .    B    
-.    .    x    .    W    .    .    .    
-.    .    x    .    .    .    W    .    
-.    .    .    x    .    .    .    .    
-.    .    .    .    .    x    .    .    
-.    .    .    .    .    .    .    .    
-
-Heuristic returned: 12
-i. Evaluation time: 1.0004461si. Heuristic evaluation time: 0.15958642959594727
-ii. Number of states evaluated: 123581
-iii. Number of states evaluated per depth:
-	6: 116120
-	5: 5092
-	4: 2232
-	3: 95
-	2: 41
-	1: 1
-iv. Average depths of heuristic evaluation: 6.0
-v. ARD: 6.0
-
-.    .    .    .    .    .    .    .    
-.    .    .    .    .    .    .    .    
-.    .    .    .    B    .    .    B    
-.    .    x    .    W    .    .    .    
-.    .    x    .    .    .    W    .    
-.    .    .    x    .    .    .    .    
-.    .    .    .    .    x    .    .    
+.    x    .    .    .    .    B    .    
 .    .    .    .    .    .    .    .    
 
 Heuristic returned: -7
-i. Evaluation time: 0.0216639si. Heuristic evaluation time: 0.019719600677490234
-ii. Number of states evaluated: 407
+i. Evaluation time: 0.0144861si. Heuristic evaluation time: 0.013850212097167969
+ii. Number of states evaluated: 555
 iii. Number of states evaluated per depth:
-	2: 351
-	1: 56
+	2: 498
+	1: 57
 iv. Average depths of heuristic evaluation: 2.0
 v. ARD: 2.0
 
+.    .    .    .    .    .    x    .    
+.    .    .    .    x    .    x    .    
 .    .    .    .    .    .    .    .    
-.    .    .    .    .    .    .    .    
-.    .    W    .    B    .    .    B    
-.    .    x    .    W    .    .    .    
-.    .    x    .    .    .    W    .    
+.    .    .    W    .    .    .    .    
+.    .    .    .    .    W    .    .    
 .    .    .    x    .    .    .    .    
-.    .    .    .    .    x    .    .    
+.    x    .    .    .    .    B    .    
 .    .    .    .    .    .    .    .    
 
-Heuristic returned: 17
-i. Evaluation time: 1.000078si. Heuristic evaluation time: 0.15524959564208984
-ii. Number of states evaluated: 143312
+Heuristic returned: 12
+i. Evaluation time: 1.0003929si. Heuristic evaluation time: 0.1361255645751953
+ii. Number of states evaluated: 171567
 iii. Number of states evaluated per depth:
-	6: 122100
-	5: 19249
-	4: 1749
-	3: 198
-	2: 15
-	1: 1
-iv. Average depths of heuristic evaluation: 6.0
+	6: 156984
+	5: 11234
+	4: 3074
+	3: 215
+	2: 57
+	1: 3
+iv. Average depths of heuristic evaluation: 5.999980889893939
 v. ARD: 6.0
 
-.    .    .    B    .    .    .    .    
-.    .    .    .    .    .    .    .    
-.    .    W    .    B    .    .    B    
-.    .    x    .    W    .    .    .    
-.    .    x    .    .    .    W    .    
+.    .    .    .    .    .    x    .    
+.    .    .    .    x    .    x    .    
+.    B    .    .    .    .    .    .    
+.    .    .    W    .    .    .    .    
+.    .    .    .    .    W    .    .    
 .    .    .    x    .    .    .    .    
-.    .    .    .    .    x    .    .    
-.    .    .    .    .    .    .    .    
-
-Heuristic returned: -6
-i. Evaluation time: 0.0188584si. Heuristic evaluation time: 0.017797231674194336
-ii. Number of states evaluated: 549
-iii. Number of states evaluated per depth:
-	2: 495
-	1: 54
-iv. Average depths of heuristic evaluation: 2.0
-v. ARD: 2.0
-
-.    .    .    B    .    .    .    .    
-.    .    .    .    .    .    .    .    
-.    .    W    .    B    .    .    B    
-W    .    x    .    W    .    .    .    
-.    .    x    .    .    .    W    .    
-.    .    .    x    .    .    .    .    
-.    .    .    .    .    x    .    .    
-.    .    .    .    .    .    .    .    
-
-Heuristic returned: 20
-i. Evaluation time: 1.0039582si. Heuristic evaluation time: 0.1269512176513672
-ii. Number of states evaluated: 157558
-iii. Number of states evaluated per depth:
-	6: 132323
-	5: 23141
-	4: 1832
-	3: 241
-	2: 20
-	1: 1
-iv. Average depths of heuristic evaluation: 6.0
-v. ARD: 6.0
-
-.    .    .    B    .    .    .    .    
-.    .    .    .    .    .    .    .    
-.    .    W    .    B    .    .    B    
-W    .    x    .    W    .    .    .    
-.    .    x    .    .    .    W    .    
-.    .    .    x    .    .    .    .    
-.    .    .    B    .    x    .    .    
+.    x    .    .    .    .    B    .    
 .    .    .    .    .    .    .    .    
 
 Heuristic returned: -9
-i. Evaluation time: 0.0231435si. Heuristic evaluation time: 0.02197122573852539
-ii. Number of states evaluated: 536
+i. Evaluation time: 0.0126295si. Heuristic evaluation time: 0.01207113265991211
+ii. Number of states evaluated: 455
 iii. Number of states evaluated per depth:
-	2: 484
-	1: 52
+	2: 400
+	1: 55
 iv. Average depths of heuristic evaluation: 2.0
 v. ARD: 2.0
 
-.    .    .    B    .    .    .    .    
-.    .    .    .    .    .    .    .    
-.    .    W    .    B    .    .    B    
-W    .    x    .    W    .    .    .    
-.    .    x    .    .    .    W    W    
+.    .    .    .    .    .    x    .    
+.    .    .    .    x    .    x    .    
+.    B    .    .    W    .    .    .    
+.    .    .    W    .    .    .    .    
+.    .    .    .    .    W    .    .    
 .    .    .    x    .    .    .    .    
-.    .    .    B    .    x    .    .    
+.    x    .    .    .    .    B    .    
+.    .    .    .    .    .    .    .    
+
+Heuristic returned: 12
+i. Evaluation time: 1.0001576si. Heuristic evaluation time: 0.12657594680786133
+ii. Number of states evaluated: 171700
+iii. Number of states evaluated per depth:
+	6: 156992
+	5: 11552
+	4: 2933
+	3: 176
+	2: 46
+	1: 1
+iv. Average depths of heuristic evaluation: 5.999987260578497
+v. ARD: 6.0
+
+.    .    .    .    .    .    x    .    
+.    .    .    .    x    .    x    .    
+.    B    .    .    W    .    .    .    
+.    B    .    W    .    .    .    .    
+.    .    .    .    .    W    .    .    
+.    .    .    x    .    .    .    .    
+.    x    .    .    .    .    B    .    
+.    .    .    .    .    .    .    .    
+
+Heuristic returned: -13
+i. Evaluation time: 0.0252018si. Heuristic evaluation time: 0.024407148361206055
+ii. Number of states evaluated: 769
+iii. Number of states evaluated per depth:
+	2: 716
+	1: 53
+iv. Average depths of heuristic evaluation: 2.0
+v. ARD: 2.0
+
+.    .    .    .    .    .    x    .    
+.    .    .    .    x    .    x    .    
+.    B    .    .    W    .    .    .    
+.    B    W    W    .    .    .    .    
+.    .    .    .    .    W    .    .    
+.    .    .    x    .    .    .    .    
+.    x    .    .    .    .    B    .    
 .    .    .    .    .    .    .    .    
 
 Heuristic returned: 16
-i. Evaluation time: 1.000232si. Heuristic evaluation time: 0.12025833129882812
-ii. Number of states evaluated: 152597
+i. Evaluation time: 1.0004919si. Heuristic evaluation time: 0.12218523025512695
+ii. Number of states evaluated: 175905
 iii. Number of states evaluated per depth:
-	6: 133379
-	5: 17594
-	4: 1499
-	3: 99
-	2: 25
-	1: 1
-iv. Average depths of heuristic evaluation: 5.999985005248163
-v. ARD: 6.0
-
-.    .    .    B    .    .    .    .    
-.    .    B    .    .    .    .    .    
-.    .    W    .    B    .    .    B    
-W    .    x    .    W    .    .    .    
-.    .    x    .    .    .    W    W    
-.    .    .    x    .    .    .    .    
-.    .    .    B    .    x    .    .    
-.    .    .    .    .    .    .    .    
-
-Heuristic returned: -9
-i. Evaluation time: 0.0225234si. Heuristic evaluation time: 0.02131366729736328
-ii. Number of states evaluated: 563
-iii. Number of states evaluated per depth:
-	2: 513
-	1: 50
-iv. Average depths of heuristic evaluation: 2.0
-v. ARD: 2.0
-
-.    .    .    B    .    .    .    .    
-.    .    B    W    .    .    .    .    
-.    .    W    .    B    .    .    B    
-W    .    x    .    W    .    .    .    
-.    .    x    .    .    .    W    W    
-.    .    .    x    .    .    .    .    
-.    .    .    B    .    x    .    .    
-.    .    .    .    .    .    .    .    
-
-Heuristic returned: 20
-i. Evaluation time: 1.1009476si. Heuristic evaluation time: 0.13537859916687012
-ii. Number of states evaluated: 116163
-iii. Number of states evaluated per depth:
-	6: 96300
-	5: 18269
-	4: 1388
-	3: 190
-	2: 15
-	1: 1
-iv. Average depths of heuristic evaluation: 5.9998546421081045
-v. ARD: 5.9998546270137645
-
-.    .    .    B    .    .    .    .    
-.    .    B    W    .    .    .    .    
-.    .    W    .    B    .    B    B    
-W    .    x    .    W    .    .    .    
-.    .    x    .    .    .    W    W    
-.    .    .    x    .    .    .    .    
-.    .    .    B    .    x    .    .    
-.    .    .    .    .    .    .    .    
-
-Heuristic returned: -10
-i. Evaluation time: 0.0396631si. Heuristic evaluation time: 0.024092674255371094
-ii. Number of states evaluated: 451
-iii. Number of states evaluated per depth:
-	2: 403
-	1: 48
-iv. Average depths of heuristic evaluation: 2.0
-v. ARD: 2.0
-
-.    .    .    B    .    W    .    .    
-.    .    B    W    .    .    .    .    
-.    .    W    .    B    .    B    B    
-W    .    x    .    W    .    .    .    
-.    .    x    .    .    .    W    W    
-.    .    .    x    .    .    .    .    
-.    .    .    B    .    x    .    .    
-.    .    .    .    .    .    .    .    
-
-Heuristic returned: 19
-i. Evaluation time: 1.0131702si. Heuristic evaluation time: 0.10546231269836426
-ii. Number of states evaluated: 109846
-iii. Number of states evaluated per depth:
-	6: 97266
-	5: 10810
-	4: 1620
-	3: 122
+	6: 150637
+	5: 22804
+	4: 2221
+	3: 215
 	2: 27
 	1: 1
-iv. Average depths of heuristic evaluation: 5.999866363757851
-v. ARD: 5.999876640931983
+iv. Average depths of heuristic evaluation: 5.999993361568794
+v. ARD: 6.0
 
-.    .    .    B    .    W    .    .    
-.    .    B    W    .    .    .    .    
-.    .    W    .    B    .    B    B    
-W    .    x    .    W    .    .    .    
-.    .    x    .    .    B    W    W    
+.    .    .    .    B    .    x    .    
+.    .    .    .    x    .    x    .    
+.    B    .    .    W    .    .    .    
+.    B    W    W    .    .    .    .    
+.    .    .    .    .    W    .    .    
 .    .    .    x    .    .    .    .    
-.    .    .    B    .    x    .    .    
+.    x    .    .    .    .    B    .    
 .    .    .    .    .    .    .    .    
 
-Heuristic returned: -11
-i. Evaluation time: 0.0306215si. Heuristic evaluation time: 0.026578187942504883
-ii. Number of states evaluated: 340
+Heuristic returned: -17
+i. Evaluation time: 0.0154121si. Heuristic evaluation time: 0.014681816101074219
+ii. Number of states evaluated: 443
 iii. Number of states evaluated per depth:
-	2: 294
-	1: 46
+	2: 392
+	1: 51
 iv. Average depths of heuristic evaluation: 2.0
 v. ARD: 2.0
 
-.    .    .    B    .    W    .    .    
-.    .    B    W    .    .    .    .    
-.    .    W    .    B    .    B    B    
-W    W    x    .    W    .    .    .    
-.    .    x    .    .    B    W    W    
+.    .    .    .    B    .    x    .    
+.    .    .    .    x    .    x    .    
+.    B    .    .    W    .    .    .    
+.    B    W    W    .    .    .    .    
+.    .    .    .    .    W    .    .    
 .    .    .    x    .    .    .    .    
-.    .    .    B    .    x    .    .    
-.    .    .    .    .    .    .    .    
-
-Heuristic returned: 19
-i. Evaluation time: 1.016969si. Heuristic evaluation time: 0.13324522972106934
-ii. Number of states evaluated: 114370
-iii. Number of states evaluated per depth:
-	6: 101181
-	5: 10718
-	4: 2272
-	3: 168
-	2: 30
-	1: 1
-iv. Average depths of heuristic evaluation: 5.997544645058229
-v. ARD: 5.997564318739354
-
-.    .    .    B    .    W    .    .    
-.    .    B    W    .    .    .    .    
-.    .    W    .    B    .    B    B    
-W    W    x    .    W    .    B    .    
-.    .    x    .    .    B    W    W    
-.    .    .    x    .    .    .    .    
-.    .    .    B    .    x    .    .    
-.    .    .    .    .    .    .    .    
-
-Heuristic returned: -10
-i. Evaluation time: 1.8359468si. Heuristic evaluation time: 0.1924278736114502
-ii. Number of states evaluated: 5
-iii. Number of states evaluated per depth:
-	2: 4
-	1: 1
-iv. Average depths of heuristic evaluation: 2.0
-v. ARD: 2
-
-.    .    .    B    .    W    .    .    
-.    .    B    W    .    .    .    .    
-.    .    W    .    B    .    B    B    
-W    W    x    .    W    .    B    .    
-.    W    x    .    .    B    W    W    
-.    .    .    x    .    .    .    .    
-.    .    .    B    .    x    .    .    
-.    .    .    .    .    .    .    .    
-
-Heuristic returned: 20
-i. Evaluation time: 1.0001626si. Heuristic evaluation time: 0.13838720321655273
-ii. Number of states evaluated: 125758
-iii. Number of states evaluated per depth:
-	6: 110471
-	5: 11805
-	4: 3114
-	3: 316
-	2: 47
-	1: 5
-iv. Average depths of heuristic evaluation: 5.994468418634402
-v. ARD: 5.994486337451569
-
-.    .    .    B    .    W    .    .    
-.    .    B    W    .    .    .    .    
-.    .    W    .    B    .    B    B    
-W    W    x    .    W    .    B    .    
-.    W    x    .    .    B    W    W    
-.    .    .    x    .    .    .    .    
-.    .    .    B    .    x    .    B    
-.    .    .    .    .    .    .    .    
-
-Heuristic returned: -10
-i. Evaluation time: 0.0621154si. Heuristic evaluation time: 0.0600430965423584
-ii. Number of states evaluated: 964
-iii. Number of states evaluated per depth:
-	2: 922
-	1: 42
-iv. Average depths of heuristic evaluation: 2.0
-v. ARD: 2.0
-
-.    .    .    B    .    W    .    .    
-.    .    B    W    .    .    .    .    
-.    .    W    .    B    .    B    B    
-W    W    x    .    W    .    B    .    
-.    W    x    .    .    B    W    W    
-.    .    .    x    W    .    .    .    
-.    .    .    B    .    x    .    B    
-.    .    .    .    .    .    .    .    
-
-Heuristic returned: 21
-i. Evaluation time: 1.0008657si. Heuristic evaluation time: 0.12346696853637695
-ii. Number of states evaluated: 132727
-iii. Number of states evaluated per depth:
-	6: 114939
-	5: 14200
-	4: 3181
-	3: 344
-	2: 58
-	1: 5
-iv. Average depths of heuristic evaluation: 5.998348988972984
-v. ARD: 5.99836633963914
-
-.    .    .    B    .    W    .    .    
-.    .    B    W    .    .    .    .    
-.    .    W    .    B    .    B    B    
-W    W    x    .    W    .    B    .    
-.    W    x    .    .    B    W    W    
-.    .    .    x    W    .    .    .    
-.    .    .    B    .    x    B    B    
-.    .    .    .    .    .    .    .    
-
-Heuristic returned: -12
-i. Evaluation time: 0.019228si. Heuristic evaluation time: 0.017817258834838867
-ii. Number of states evaluated: 310
-iii. Number of states evaluated per depth:
-	2: 270
-	1: 40
-iv. Average depths of heuristic evaluation: 2.0
-v. ARD: 2.0
-
-.    .    .    B    .    W    .    .    
-.    .    B    W    .    .    .    .    
-.    .    W    .    B    .    B    B    
-W    W    x    .    W    .    B    .    
-.    W    x    .    .    B    W    W    
-.    .    .    x    W    .    .    .    
-.    .    .    B    .    x    B    B    
+.    x    .    .    .    .    B    .    
 .    .    .    .    W    .    .    .    
 
-Heuristic returned: 21
-i. Evaluation time: 1.000061si. Heuristic evaluation time: 0.12444949150085449
-ii. Number of states evaluated: 120300
+Heuristic returned: 15
+i. Evaluation time: 1.0000916si. Heuristic evaluation time: 0.12380027770996094
+ii. Number of states evaluated: 167152
 iii. Number of states evaluated per depth:
-	6: 105516
-	5: 11818
-	4: 2734
-	3: 200
+	6: 143601
+	5: 21018
+	4: 2291
+	3: 210
 	2: 31
 	1: 1
-iv. Average depths of heuristic evaluation: 5.998730988503135
-v. ARD: 5.998730916388143
+iv. Average depths of heuristic evaluation: 5.999993036308687
+v. ARD: 6.0
 
-.    .    .    B    .    W    .    .    
-.    .    B    W    .    .    .    .    
-.    .    W    .    B    .    B    B    
-W    W    x    .    W    .    B    .    
-.    W    x    .    B    B    W    W    
-.    .    .    x    W    .    .    .    
-.    .    .    B    .    x    B    B    
+.    .    .    .    B    .    x    .    
+.    .    .    .    x    .    x    .    
+.    B    .    .    W    .    .    .    
+.    B    W    W    .    .    .    .    
+.    .    .    .    .    W    .    .    
+.    .    .    x    .    .    .    B    
+.    x    .    .    .    .    B    .    
 .    .    .    .    W    .    .    .    
 
-Heuristic returned: -11
-i. Evaluation time: 0.0199621si. Heuristic evaluation time: 0.018819093704223633
-ii. Number of states evaluated: 340
+Heuristic returned: -19
+i. Evaluation time: 0.0221798si. Heuristic evaluation time: 0.021323680877685547
+ii. Number of states evaluated: 540
 iii. Number of states evaluated per depth:
-	2: 302
-	1: 38
+	2: 491
+	1: 49
 iv. Average depths of heuristic evaluation: 2.0
 v. ARD: 2.0
 
-.    .    .    B    .    W    .    .    
-.    .    B    W    .    .    .    .    
-.    .    W    .    B    W    B    B    
-W    W    x    .    W    .    B    .    
-.    W    x    .    B    B    W    W    
-.    .    .    x    W    .    .    .    
-.    .    .    B    .    x    B    B    
+.    .    .    .    B    .    x    .    
+.    .    .    .    x    .    x    .    
+.    B    .    .    W    .    .    .    
+.    B    W    W    .    .    .    .    
+W    .    .    .    .    W    .    .    
+.    .    .    x    .    .    .    B    
+.    x    .    .    .    .    B    .    
+.    .    .    .    W    .    .    .    
+
+Heuristic returned: 18
+i. Evaluation time: 1.0001442si. Heuristic evaluation time: 0.11204218864440918
+ii. Number of states evaluated: 164193
+iii. Number of states evaluated per depth:
+	6: 139596
+	5: 21497
+	4: 2658
+	3: 378
+	2: 57
+	1: 7
+iv. Average depths of heuristic evaluation: 5.999964183637653
+v. ARD: 5.9999713462942905
+
+.    .    .    .    B    .    x    .    
+.    .    .    .    x    .    x    .    
+.    B    .    .    W    .    .    .    
+.    B    W    W    .    .    .    .    
+W    .    .    .    B    W    .    .    
+.    .    .    x    .    .    .    B    
+.    x    .    .    .    .    B    .    
+.    .    .    .    W    .    .    .    
+
+Heuristic returned: -18
+i. Evaluation time: 0.0197761si. Heuristic evaluation time: 0.018921375274658203
+ii. Number of states evaluated: 536
+iii. Number of states evaluated per depth:
+	2: 489
+	1: 47
+iv. Average depths of heuristic evaluation: 2.0
+v. ARD: 2.0
+
+.    .    .    .    B    .    x    .    
+.    .    .    .    x    .    x    .    
+.    B    .    .    W    .    .    .    
+.    B    W    W    .    .    .    W    
+W    .    .    .    B    W    .    .    
+.    .    .    x    .    .    .    B    
+.    x    .    .    .    .    B    .    
+.    .    .    .    W    .    .    .    
+
+Heuristic returned: 19
+i. Evaluation time: 1.0002065si. Heuristic evaluation time: 0.1115565299987793
+ii. Number of states evaluated: 160931
+iii. Number of states evaluated per depth:
+	6: 128234
+	5: 29520
+	4: 2498
+	3: 609
+	2: 57
+	1: 13
+iv. Average depths of heuristic evaluation: 5.999929819636466
+v. ARD: 5.999953212361175
+
+.    .    .    .    B    .    x    .    
+.    .    .    B    x    .    x    .    
+.    B    .    .    W    .    .    .    
+.    B    W    W    .    .    .    W    
+W    .    .    .    B    W    .    .    
+.    .    .    x    .    .    .    B    
+.    x    .    .    .    .    B    .    
+.    .    .    .    W    .    .    .    
+
+Heuristic returned: -20
+i. Evaluation time: 0.0118544si. Heuristic evaluation time: 0.011265277862548828
+ii. Number of states evaluated: 322
+iii. Number of states evaluated per depth:
+	2: 277
+	1: 45
+iv. Average depths of heuristic evaluation: 2.0
+v. ARD: 2.0
+
+.    W    .    .    B    .    x    .    
+.    .    .    B    x    .    x    .    
+.    B    .    .    W    .    .    .    
+.    B    W    W    .    .    .    W    
+W    .    .    .    B    W    .    .    
+.    .    .    x    .    .    .    B    
+.    x    .    .    .    .    B    .    
+.    .    .    .    W    .    .    .    
+
+Heuristic returned: 20
+i. Evaluation time: 1.0003181si. Heuristic evaluation time: 0.10954523086547852
+ii. Number of states evaluated: 153187
+iii. Number of states evaluated per depth:
+	6: 129677
+	5: 20921
+	4: 2247
+	3: 288
+	2: 48
+	1: 6
+iv. Average depths of heuristic evaluation: 5.999976865775228
+v. ARD: 6.0
+
+.    W    .    .    B    .    x    .    
+.    .    .    B    x    .    x    .    
+.    B    .    .    W    .    .    .    
+.    B    W    W    .    .    B    W    
+W    .    .    .    B    W    .    .    
+.    .    .    x    .    .    .    B    
+.    x    .    .    .    .    B    .    
+.    .    .    .    W    .    .    .    
+
+Heuristic returned: -18
+i. Evaluation time: 0.0148957si. Heuristic evaluation time: 0.014241933822631836
+ii. Number of states evaluated: 372
+iii. Number of states evaluated per depth:
+	2: 329
+	1: 43
+iv. Average depths of heuristic evaluation: 2.0
+v. ARD: 2.0
+
+.    W    .    .    B    .    x    .    
+.    .    .    B    x    .    x    .    
+.    B    .    .    W    .    .    .    
+.    B    W    W    .    .    B    W    
+W    .    .    .    B    W    .    .    
+.    .    .    x    .    .    .    B    
+.    x    .    .    W    .    B    .    
+.    .    .    .    W    .    .    .    
+
+Heuristic returned: 21
+i. Evaluation time: 1.0000372si. Heuristic evaluation time: 0.10166501998901367
+ii. Number of states evaluated: 154534
+iii. Number of states evaluated per depth:
+	6: 127585
+	5: 23869
+	4: 2675
+	3: 357
+	2: 44
+	1: 4
+iv. Average depths of heuristic evaluation: 6.0
+v. ARD: 6.0
+
+.    W    .    .    B    .    x    .    
+.    .    .    B    x    .    x    .    
+.    B    .    .    W    .    .    .    
+B    B    W    W    .    .    B    W    
+W    .    .    .    B    W    .    .    
+.    .    .    x    .    .    .    B    
+.    x    .    .    W    .    B    .    
+.    .    .    .    W    .    .    .    
+
+Heuristic returned: -15
+i. Evaluation time: 0.0129802si. Heuristic evaluation time: 0.012321233749389648
+ii. Number of states evaluated: 309
+iii. Number of states evaluated per depth:
+	2: 268
+	1: 41
+iv. Average depths of heuristic evaluation: 2.0
+v. ARD: 2.0
+
+.    W    .    .    B    .    x    .    
+.    .    .    B    x    .    x    .    
+.    B    .    .    W    .    .    .    
+B    B    W    W    .    .    B    W    
+W    .    .    .    B    W    .    .    
+.    .    .    x    .    .    W    B    
+.    x    .    .    W    .    B    .    
+.    .    .    .    W    .    .    .    
+
+Heuristic returned: 22
+i. Evaluation time: 1.0000494si. Heuristic evaluation time: 0.08840823173522949
+ii. Number of states evaluated: 149434
+iii. Number of states evaluated per depth:
+	6: 111281
+	5: 35089
+	4: 2195
+	3: 791
+	2: 58
+	1: 20
+iv. Average depths of heuristic evaluation: 5.9999820278029885
+v. ARD: 5.999982022633453
+
+.    W    .    .    B    .    x    .    
+.    .    .    B    x    .    x    .    
+.    B    .    B    W    .    .    .    
+B    B    W    W    .    .    B    W    
+W    .    .    .    B    W    .    .    
+.    .    .    x    .    .    W    B    
+.    x    .    .    W    .    B    .    
+.    .    .    .    W    .    .    .    
+
+Heuristic returned: -11
+i. Evaluation time: 0.0290637si. Heuristic evaluation time: 0.028240203857421875
+ii. Number of states evaluated: 661
+iii. Number of states evaluated per depth:
+	2: 622
+	1: 39
+iv. Average depths of heuristic evaluation: 2.0
+v. ARD: 2.0
+
+.    W    .    .    B    .    x    .    
+.    .    .    B    x    .    x    .    
+.    B    .    B    W    .    .    .    
+B    B    W    W    .    .    B    W    
+W    W    .    .    B    W    .    .    
+.    .    .    x    .    .    W    B    
+.    x    .    .    W    .    B    .    
 .    .    .    .    W    .    .    .    
 
 Heuristic returned: 23
-i. Evaluation time: 1.003808si. Heuristic evaluation time: 0.1037437915802002
-ii. Number of states evaluated: 138789
+i. Evaluation time: 1.0001688si. Heuristic evaluation time: 0.0833585262298584
+ii. Number of states evaluated: 141379
 iii. Number of states evaluated per depth:
-	6: 119394
-	5: 15733
-	4: 3300
-	3: 300
-	2: 60
-	1: 2
-iv. Average depths of heuristic evaluation: 5.999355292462782
-v. ARD: 5.999363649302221
+	6: 102216
+	5: 36008
+	4: 2216
+	3: 857
+	2: 59
+	1: 23
+iv. Average depths of heuristic evaluation: 5.999970650674546
+v. ARD: 6.0
 
-.    .    .    B    .    W    .    .    
-.    .    B    W    .    .    .    .    
-.    .    W    .    B    W    B    B    
-W    W    x    .    W    B    B    .    
-.    W    x    .    B    B    W    W    
-.    .    .    x    W    .    .    .    
-.    .    .    B    .    x    B    B    
+.    W    B    .    B    .    x    .    
+.    .    .    B    x    .    x    .    
+.    B    .    B    W    .    .    .    
+B    B    W    W    .    .    B    W    
+W    W    .    .    B    W    .    .    
+.    .    .    x    .    .    W    B    
+.    x    .    .    W    .    B    .    
 .    .    .    .    W    .    .    .    
 
-Heuristic returned: -12
-i. Evaluation time: 0.0240781si. Heuristic evaluation time: 0.023015975952148438
-ii. Number of states evaluated: 406
+Heuristic returned: -11
+i. Evaluation time: 0.0237477si. Heuristic evaluation time: 0.022974491119384766
+ii. Number of states evaluated: 488
 iii. Number of states evaluated per depth:
-	2: 370
-	1: 36
+	2: 451
+	1: 37
 iv. Average depths of heuristic evaluation: 2.0
 v. ARD: 2.0
 
-.    .    .    B    .    W    .    .    
-.    .    B    W    .    .    .    .    
-.    .    W    .    B    W    B    B    
-W    W    x    .    W    B    B    .    
-.    W    x    .    B    B    W    W    
-.    .    .    x    W    .    .    .    
-.    .    .    B    .    x    B    B    
-.    .    .    .    W    .    .    W    
+.    W    B    .    B    .    x    .    
+.    .    .    B    x    .    x    .    
+.    B    .    B    W    .    .    .    
+B    B    W    W    .    W    B    W    
+W    W    .    .    B    W    .    .    
+.    .    .    x    .    .    W    B    
+.    x    .    .    W    .    B    .    
+.    .    .    .    W    .    .    .    
 
 Heuristic returned: 24
-i. Evaluation time: 1.0007234si. Heuristic evaluation time: 0.0981905460357666
-ii. Number of states evaluated: 136336
+i. Evaluation time: 1.0000675si. Heuristic evaluation time: 0.08511185646057129
+ii. Number of states evaluated: 118254
 iii. Number of states evaluated per depth:
-	6: 116021
-	5: 16551
-	4: 3372
-	3: 323
-	2: 67
-	1: 2
-iv. Average depths of heuristic evaluation: 5.999138458357384
-v. ARD: 5.999155674639927
+	6: 84702
+	5: 30612
+	4: 2054
+	3: 806
+	2: 57
+	1: 23
+iv. Average depths of heuristic evaluation: 6.0
+v. ARD: 6.0
 
-.    .    .    B    .    W    .    .    
-.    .    B    W    .    .    .    .    
-.    .    W    .    B    W    B    B    
-W    W    x    B    W    B    B    .    
-.    W    x    .    B    B    W    W    
-.    .    .    x    W    .    .    .    
-.    .    .    B    .    x    B    B    
-.    .    .    .    W    .    .    W    
+.    W    B    .    B    .    x    .    
+.    .    .    B    x    .    x    .    
+.    B    .    B    W    .    .    .    
+B    B    W    W    .    W    B    W    
+W    W    .    .    B    W    .    .    
+.    .    .    x    B    .    W    B    
+.    x    .    .    W    .    B    .    
+.    .    .    .    W    .    .    .    
 
-Heuristic returned: -13
-i. Evaluation time: 0.0417571si. Heuristic evaluation time: 0.03900551795959473
-ii. Number of states evaluated: 415
+Heuristic returned: -10
+i. Evaluation time: 0.0221064si. Heuristic evaluation time: 0.021422624588012695
+ii. Number of states evaluated: 454
 iii. Number of states evaluated per depth:
-	2: 381
-	1: 34
+	2: 419
+	1: 35
 iv. Average depths of heuristic evaluation: 2.0
 v. ARD: 2.0
 
-.    .    .    B    .    W    .    .    
-.    .    B    W    .    .    .    .    
-.    .    W    .    B    W    B    B    
-W    W    x    B    W    B    B    .    
-.    W    x    .    B    B    W    W    
-.    .    .    x    W    .    .    .    
-.    .    .    B    W    x    B    B    
-.    .    .    .    W    .    .    W    
-
-Heuristic returned: 26
-i. Evaluation time: 1.0000525si. Heuristic evaluation time: 0.10294342041015625
-ii. Number of states evaluated: 132331
-iii. Number of states evaluated per depth:
-	6: 111444
-	5: 16998
-	4: 3468
-	3: 355
-	2: 62
-	1: 4
-iv. Average depths of heuristic evaluation: 5.998547410894418
-v. ARD: 5.998547098228913
-
-.    .    .    B    .    W    .    .    
-.    .    B    W    .    .    .    .    
-.    .    W    .    B    W    B    B    
-W    W    x    B    W    B    B    .    
-.    W    x    .    B    B    W    W    
-.    .    .    x    W    B    .    .    
-.    .    .    B    W    x    B    B    
-.    .    .    .    W    .    .    W    
-
-Heuristic returned: -13
-i. Evaluation time: 0.0262523si. Heuristic evaluation time: 0.0251920223236084
-ii. Number of states evaluated: 479
-iii. Number of states evaluated per depth:
-	2: 447
-	1: 32
-iv. Average depths of heuristic evaluation: 2.0
-v. ARD: 2.0
-
-.    .    .    B    .    W    .    .    
-.    .    B    W    .    .    .    .    
-.    .    W    .    B    W    B    B    
-W    W    x    B    W    B    B    .    
-W    W    x    .    B    B    W    W    
-.    .    .    x    W    B    .    .    
-.    .    .    B    W    x    B    B    
-.    .    .    .    W    .    .    W    
+.    W    B    .    B    .    x    .    
+.    .    W    B    x    .    x    .    
+.    B    .    B    W    .    .    .    
+B    B    W    W    .    W    B    W    
+W    W    .    .    B    W    .    .    
+.    .    .    x    B    .    W    B    
+.    x    .    .    W    .    B    .    
+.    .    .    .    W    .    .    .    
 
 Heuristic returned: 25
-i. Evaluation time: 1.0002995si. Heuristic evaluation time: 0.09449481964111328
-ii. Number of states evaluated: 126781
+i. Evaluation time: 1.0003331si. Heuristic evaluation time: 0.07410836219787598
+ii. Number of states evaluated: 116525
 iii. Number of states evaluated per depth:
-	6: 110918
-	5: 12194
-	4: 3420
-	3: 213
-	2: 34
-	1: 2
-iv. Average depths of heuristic evaluation: 5.996570903985312
-v. ARD: 5.996579842827333
+	6: 77799
+	5: 35407
+	4: 2151
+	3: 1071
+	2: 64
+	1: 33
+iv. Average depths of heuristic evaluation: 5.999935732647815
+v. ARD: 6.0
 
-.    .    .    B    .    W    .    .    
-.    .    B    W    B    .    .    .    
-.    .    W    .    B    W    B    B    
-W    W    x    B    W    B    B    .    
-W    W    x    .    B    B    W    W    
-.    .    .    x    W    B    .    .    
-.    .    .    B    W    x    B    B    
-.    .    .    .    W    .    .    W    
+.    W    B    .    B    .    x    .    
+.    .    W    B    x    .    x    .    
+.    B    .    B    W    .    .    .    
+B    B    W    W    .    W    B    W    
+W    W    .    .    B    W    .    B    
+.    .    .    x    B    .    W    B    
+.    x    .    .    W    .    B    .    
+.    .    .    .    W    .    .    .    
+
+Heuristic returned: -9
+i. Evaluation time: 0.0238512si. Heuristic evaluation time: 0.02294635772705078
+ii. Number of states evaluated: 424
+iii. Number of states evaluated per depth:
+	2: 391
+	1: 33
+iv. Average depths of heuristic evaluation: 2.0
+v. ARD: 2.0
+
+.    W    B    .    B    .    x    .    
+.    .    W    B    x    .    x    .    
+.    B    .    B    W    .    .    .    
+B    B    W    W    .    W    B    W    
+W    W    .    .    B    W    .    B    
+.    .    .    x    B    .    W    B    
+.    x    .    .    W    .    B    .    
+.    .    W    .    W    .    .    .    
+
+Heuristic returned: 26
+i. Evaluation time: 0.7700875si. Heuristic evaluation time: 0.05734705924987793
+ii. Number of states evaluated: 102080
+iii. Number of states evaluated per depth:
+	6: 67467
+	5: 31483
+	4: 2022
+	3: 1014
+	2: 62
+	1: 32
+iv. Average depths of heuristic evaluation: 6.0
+v. ARD: 6.0
+
+.    W    B    .    B    .    x    .    
+.    .    W    B    x    .    x    .    
+.    B    .    B    W    .    .    .    
+B    B    W    W    .    W    B    W    
+W    W    .    .    B    W    .    B    
+.    .    .    x    B    B    W    B    
+.    x    .    .    W    .    B    .    
+.    .    W    .    W    .    .    .    
+
+Heuristic returned: -6
+i. Evaluation time: 0.0243034si. Heuristic evaluation time: 0.023484468460083008
+ii. Number of states evaluated: 449
+iii. Number of states evaluated per depth:
+	2: 418
+	1: 31
+iv. Average depths of heuristic evaluation: 2.0
+v. ARD: 2.0
+
+.    W    B    .    B    .    x    .    
+.    .    W    B    x    .    x    .    
+.    B    .    B    W    .    .    .    
+B    B    W    W    .    W    B    W    
+W    W    W    .    B    W    .    B    
+.    .    .    x    B    B    W    B    
+.    x    .    .    W    .    B    .    
+.    .    W    .    W    .    .    .    
+
+Heuristic returned: 26
+i. Evaluation time: 1.0000999si. Heuristic evaluation time: 0.08167386054992676
+ii. Number of states evaluated: 128777
+iii. Number of states evaluated per depth:
+	6: 106646
+	5: 18231
+	4: 3506
+	3: 318
+	2: 73
+	1: 3
+iv. Average depths of heuristic evaluation: 5.997855021964949
+v. ARD: 5.9978643286638915
+
+.    W    B    .    B    .    x    .    
+.    .    W    B    x    .    x    .    
+.    B    .    B    W    .    .    .    
+B    B    W    W    .    W    B    W    
+W    W    W    .    B    W    .    B    
+.    .    B    x    B    B    W    B    
+.    x    .    .    W    .    B    .    
+.    .    W    .    W    .    .    .    
+
+Heuristic returned: -4
+i. Evaluation time: 0.0331912si. Heuristic evaluation time: 0.03203773498535156
+ii. Number of states evaluated: 464
+iii. Number of states evaluated per depth:
+	2: 435
+	1: 29
+iv. Average depths of heuristic evaluation: 2.0
+v. ARD: 2.0
+
+.    W    B    .    B    .    x    .    
+.    .    W    B    x    .    x    .    
+.    B    .    B    W    .    .    .    
+B    B    W    W    .    W    B    W    
+W    W    W    .    B    W    .    B    
+.    .    B    x    B    B    W    B    
+.    x    .    .    W    .    B    .    
+.    .    W    W    W    .    .    .    
+
+Heuristic returned: 27
+i. Evaluation time: 1.0001333si. Heuristic evaluation time: 0.0756368637084961
+ii. Number of states evaluated: 122296
+iii. Number of states evaluated per depth:
+	6: 99504
+	5: 18765
+	4: 3583
+	3: 373
+	2: 66
+	1: 5
+iv. Average depths of heuristic evaluation: 5.996699073934724
+v. ARD: 5.9967090410992645
+
+.    W    B    .    B    .    x    .    
+.    .    W    B    x    .    x    .    
+.    B    .    B    W    .    .    .    
+B    B    W    W    B    W    B    W    
+W    W    W    .    B    W    .    B    
+.    .    B    x    B    B    W    B    
+.    x    .    .    W    .    B    .    
+.    .    W    W    W    .    .    .    
+
+Heuristic returned: -5
+i. Evaluation time: 0.0203605si. Heuristic evaluation time: 0.01968097686767578
+ii. Number of states evaluated: 358
+iii. Number of states evaluated per depth:
+	2: 331
+	1: 27
+iv. Average depths of heuristic evaluation: 2.0
+v. ARD: 2.0
+
+.    W    B    .    B    .    x    .    
+.    .    W    B    x    .    x    .    
+.    B    .    B    W    .    .    .    
+B    B    W    W    B    W    B    W    
+W    W    W    .    B    W    .    B    
+.    .    B    x    B    B    W    B    
+.    x    .    .    W    .    B    .    
+.    .    W    W    W    W    .    .    
+
+Heuristic returned: 28
+i. Evaluation time: 1.0001519si. Heuristic evaluation time: 0.07383179664611816
+ii. Number of states evaluated: 120148
+iii. Number of states evaluated per depth:
+	6: 98111
+	5: 17471
+	4: 4148
+	3: 357
+	2: 54
+	1: 7
+iv. Average depths of heuristic evaluation: 5.992768710453885
+v. ARD: 5.992788876569623
+
+.    W    B    B    B    .    x    .    
+.    .    W    B    x    .    x    .    
+.    B    .    B    W    .    .    .    
+B    B    W    W    B    W    B    W    
+W    W    W    .    B    W    .    B    
+.    .    B    x    B    B    W    B    
+.    x    .    .    W    .    B    .    
+.    .    W    W    W    W    .    .    
 
 Heuristic returned: -50.0
-i. Evaluation time: 0.009263si. Heuristic evaluation time: 0.008433103561401367
-ii. Number of states evaluated: 172
+i. Evaluation time: 0.0053289si. Heuristic evaluation time: 0.004710197448730469
+ii. Number of states evaluated: 101
 iii. Number of states evaluated per depth:
-	2: 142
-	1: 30
-iv. Average depths of heuristic evaluation: 1.993006993006993
-v. ARD: 1.993006993006993
+	2: 76
+	1: 25
+iv. Average depths of heuristic evaluation: 1.9743589743589745
+v. ARD: 1.9743589743589745
 
-.    .    .    B    W    W    .    .    
-.    .    B    W    B    .    .    .    
-.    .    W    .    B    W    B    B    
-W    W    x    B    W    B    B    .    
-W    W    x    .    B    B    W    W    
-.    .    .    x    W    B    .    .    
-.    .    .    B    W    x    B    B    
-.    .    .    .    W    .    .    W    
+.    W    B    B    B    .    x    .    
+.    .    W    B    x    .    x    .    
+.    B    .    B    W    .    .    .    
+B    B    W    W    B    W    B    W    
+W    W    W    .    B    W    .    B    
+.    .    B    x    B    B    W    B    
+.    x    .    .    W    .    B    .    
+.    W    W    W    W    W    .    .    
 
-i. Average evaluation time of heuristic: 1.0713691286254276e-06
-ii. Total states evaluated: 9953462
-iii. Average of average depths: 3.922714956298635
+i. Average evaluation time of heuristic: 1.0425491581965207e-06
+ii. Total states evaluated: 11316559
+iii. Average of average depths: 3.9358886084405045
 iv. Total number of states evaluated at each depth: 
-	6: 8677119
-	5: 1056893
-	4: 166792
-	3: 12841
-	2: 36538
-	1: 3279
-v. Average ARD: 3.9227197088166315
-vi. Total Move Count: 131
+	6: 9582009
+	5: 1460117
+	4: 204581
+	3: 25322
+	2: 40517
+	1: 4013
+v. Average ARD: 3.935893846836672
+vi. Total Move Count: 159

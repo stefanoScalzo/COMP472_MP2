@@ -93,9 +93,9 @@ class ScoreBoard:
                     self.average_total_state_counts_p_depth[depth] = stats[3][depth]
             self.average_ard_averages += stats[4]
             self.average_move_counter += stats[5]
-            if stats[6] == 'W':
+            if stats[7] == 'e1' :
                 self.winning_e1 += 1
-            elif stats[6] == 'B':
+            elif stats[7] == 'e2':
                 self.winning_e2 += 1
 
         self.average_heuristic_times = self.average_heuristic_times / (self.num_of_games_per_symbol * 2)

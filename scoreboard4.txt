@@ -10,17 +10,17 @@ Algo for White: ALPHABETA
 Algo for Black: ALPHABETA
 Player White heuristic: E2
 Player Black heuristic: E1
-Heuristic 1 winning %: 57.5
-Heuristic 2 winning %: 0.0
-i. Average of Average evaluation time of heuristic: 2.1821592768092844e-05
-ii. Average of Total states evaluated: 3756761.44549
-iii. Average of Average of average depths: 4.566174815064004
+Heuristic 1 winning %: 0.0
+Heuristic 2 winning %: 60.0
+i. Average of Average evaluation time of heuristic: 2.3321459618703078e-05
+ii. Average of Total states evaluated: 4075143.2855399996
+iii. Average of Average of average depths: 4.580404656633258
 iv. Average Total number of states evaluated at each depth: 
-	6: 3259975.24197
-	5: 415726.43958999997
-	4: 58474.873640000005
-	3: 5670.54242
-	2: 14799.07952
-	1: 2115.26835
-v. Average of Average ARD: 4.566200556868355
-vi. Average Total Move Count: 87.65218
+	6: 3485142.8583900006
+	5: 490502.93168000004
+	4: 71119.32698
+	3: 8524.19133
+	2: 17546.555849999997
+	1: 2307.42131
+v. Average of Average ARD: 4.580426063660529
+vi. Average Total Move Count: 99.26415999999999

@@ -726,11 +726,25 @@ class LineEmUp:
         """
         :return: a tuple of all the stats
         """
+        if self.result == 'W':
+            if (self.heuristic_w == self.E1):
+                winning_heuristic = 'e1'
+            else:
+                winning_heuristic = 'e2'
+
+        elif self.result == 'B':
+            if (self.heuristic_b == self.E1):
+                winning_heuristic = 'e1'
+            else:
+                winning_heuristic = 'e2'
+        else:
+            winning_heuristic ='.'
+            
         return (sum(self.total_heuristic_times) / len(self.total_heuristic_times),
                 self.total_state_counts, sum(self.depth_averages) / len(self.depth_averages),
                 self.total_state_counts_p_depth,
                 sum(self.ard_averages) / len(self.ard_averages), self.move_counter,
-                self.result)
+                self.result,winning_heuristic)
 
     def play(self):
         """
